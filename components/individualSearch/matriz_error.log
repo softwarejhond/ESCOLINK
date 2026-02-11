@@ -1,0 +1,9 @@
+[2026-01-15 13:27:07] Permission denied | Context: {"rol":1,"session":{"timeout":1768501463,"loggedin":true,"nombre":"Juan Zapata","rol":1,"username":"1001142067","foto":"img\/fotoUsuarios\/22233344_24102025.png","extra_rol":0,"orden":1,"campos_incompletos":false,"campos_faltantes":[],"sede":"OFICINA METROFEM"}}
+[2026-01-15 13:27:24] Permission denied | Context: {"rol":1,"session":{"timeout":1768501463,"loggedin":true,"nombre":"Juan Zapata","rol":1,"username":"1001142067","foto":"img\/fotoUsuarios\/22233344_24102025.png","extra_rol":0,"orden":1,"campos_incompletos":false,"campos_faltantes":[],"sede":"OFICINA METROFEM"}}
+[2026-01-15 13:27:42] Permission denied | Context: {"rol":1,"session":{"timeout":1768501463,"loggedin":true,"nombre":"Juan Zapata","rol":1,"username":"1001142067","foto":"img\/fotoUsuarios\/22233344_24102025.png","extra_rol":0,"orden":1,"campos_incompletos":false,"campos_faltantes":[],"sede":"OFICINA METROFEM"}}
+[2026-01-15 13:31:03] Starting matrix generation
+[2026-01-15 13:31:03] Exception: Unknown column 'data_update' in 'SELECT' | File: /home/agenciae/beneficiosmetrofem.agenciaeaglesoftware.com/components/individualSearch/obtener_datos_matriz.php | Line: 40
+[2026-01-15 13:33:44] Starting matrix generation
+[2026-01-15 13:33:44] Exception: Commands out of sync; you can't run this command now | File: /home/agenciae/beneficiosmetrofem.agenciaeaglesoftware.com/components/individualSearch/obtener_datos_matriz.php | Line: 81
+[2026-01-15 13:33:46] Starting matrix generation
+[2026-01-15 13:33:46] Exception: Commands out of sync; you can't run this command now | File: /home/agenciae/beneficiosmetrofem.agenciaeaglesoftware.com/components/individualSearch/obtener_datos_matriz.php | Line: 81

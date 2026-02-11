@@ -1,0 +1,56 @@
+[2025-10-20 19:39:10] Error fatal al enviar correo: Class "PHPMailer\PHPMailer\PHPMailer" not found
+[2025-10-20 19:40:48] Error fatal al enviar correo: Class "PHPMailer\PHPMailer\PHPMailer" not found
+[2025-10-20 19:42:49] Correo enviado exitosamente a JUANDIDOC11@GMAIL.COM
+[2025-10-20 20:46:41] Correo enviado exitosamente a JUANDIDOC11@GMAIL.COM
+[2025-10-20 20:49:17] Correo enviado exitosamente a JUANDIDOC11@GMAIL.COM
+[2025-10-20 20:51:26] Correo enviado exitosamente a JUANDIDOC11@GMAIL.COM
+[2025-10-20 20:58:23] Correo enviado exitosamente a JUANDIDOC11@GMAIL.COM
+[2025-10-20 21:53:32] Correo enviado exitosamente a JUANDIDOC11@GMAIL.COM
+[2025-10-21 10:44:45] Error al enviar correo: SMTP Error: The following recipients failed: JAVIER.VARGAS@EJEMPLO.COM: The mail server could not deliver mail to javier.vargas@ejemplo.com.  The
+account or domain may not exist, they may be blacklisted, or missing the
+proper dns entries.
+
+[2025-10-21 11:17:03] Correo enviado exitosamente a JUANDIDOC11@GMAIL.COM
+[2025-10-21 11:20:27] Correo enviado exitosamente a JUANDIDOC11@GMAIL.COM
+[2025-10-21 20:12:28] Correo enviado exitosamente a JUANDIDOC11@GMAIL.COM
+[2025-10-21 20:17:16] Correo enviado exitosamente a JUANDIDOC11@GMAIL.COM
+[2025-10-24 13:03:30] Error al enviar correo: SMTP Error: The following recipients failed: DOLORES@EJEMPLO.COM: The mail server could not deliver mail to dolores@ejemplo.com.  The account
+or domain may not exist, they may be blacklisted, or missing the proper dns
+entries.
+
+[2025-10-24 13:05:18] Correo enviado exitosamente a JUANDIDOC11@GMAIL.COM
+[2025-10-24 13:08:55] Correo enviado exitosamente a JUANDIDOC11@GMAIL.COM
+[2025-10-28 15:48:12] Error al enviar correo: SMTP Error: The following recipients failed: ANTONIO@EJEMPLO.COM: The mail server could not deliver mail to antonio@ejemplo.com.  The account
+or domain may not exist, they may be blacklisted, or missing the proper dns
+entries.
+
+[2025-10-28 15:56:49] Error al enviar correo: SMTP Error: The following recipients failed: ELENA@EJEMPLO.COM: The mail server could not deliver mail to elena@ejemplo.com.  The account
+or domain may not exist, they may be blacklisted, or missing the proper dns
+entries.
+
+[2025-10-28 16:41:53] Error al enviar correo: SMTP Error: The following recipients failed: PEDRO@EJEMPLO.COM: The mail server could not deliver mail to pedro@ejemplo.com.  The account
+or domain may not exist, they may be blacklisted, or missing the proper dns
+entries.
+
+[2025-10-28 16:55:22] Error al enviar correo: SMTP Error: The following recipients failed: CARLOS@EJEMPLO.COM: The mail server could not deliver mail to carlos@ejemplo.com.  The account
+or domain may not exist, they may be blacklisted, or missing the proper dns
+entries.
+
+[2025-10-28 18:26:40] RESEND - Correo reenviado exitosamente a JUANDIDOC11@GMAIL.COM para usuario 44940890
+[2025-10-29 14:54:00] RESEND - Error al reenviar correo: SMTP Error: The following recipients failed: SISTEMAS@AMIGOTEX.COM: No such person at this address."
+
+[2025-10-29 14:55:31] RESEND - Error al reenviar correo: SMTP Error: The following recipients failed: SISTEMAS@AMIGOTEX.COM: No such person at this address."
+
+[2025-10-29 15:00:28] RESEND - Correo reenviado exitosamente a JDZAPATAMAR@CESDE.NET para usuario 37929601
+[2025-11-05 11:49:58] Error al enviar correo: SMTP Error: Could not authenticate.
+[2025-11-05 11:51:34] Error al enviar correo: SMTP Error: Could not authenticate.
+[2025-11-05 14:10:08] Error al enviar correo: SMTP Error: Could not authenticate.
+[2025-11-10 10:31:47] Error al enviar correo: SMTP Error: Could not authenticate.
+[2025-11-10 10:34:08] RESEND - Error al reenviar correo: SMTP Error: Could not authenticate.
+[2025-11-12 18:25:44] Error al enviar correo: SMTP Error: Could not authenticate.
+[2025-11-25 13:41:51] Email no válido o vacío: camila.hernández@correo.com
+[2025-11-25 14:17:01] Email no válido o vacío: camila.hernández@correo.com
+[2025-11-25 14:26:29] RESEND - Error al reenviar correo: SMTP Error: Could not authenticate.
+[2026-01-13 10:22:22] Correo enviado exitosamente a juandidoc11@gmail.com para REGALO TRES
+[2026-01-14 02:23:50] Correo enviado exitosamente a juandidoc11@gmail.com para REGALO TRES - MASCULINO
+[2026-01-14 23:56:30] Correo enviado exitosamente a juandidoc11@gmail.com para REGALO TRES - MASCULINO

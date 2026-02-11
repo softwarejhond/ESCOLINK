@@ -1,0 +1,42 @@
+[14-Jan-2026 18:06:02 America/Bogota] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/agenciae/beneficiosmetrofem.agenciaeaglesoftware.com/controller/conexion.php:9
+Stack trace:
+#0 /home/agenciae/beneficiosmetrofem.agenciaeaglesoftware.com/controller/conexion.php(9): mysqli_connect()
+#1 /home/agenciae/beneficiosmetrofem.agenciaeaglesoftware.com/components/autorizarEntrega/search_user.php(5): include('/home/agenciae/...')
+#2 {main}
+  thrown in /home/agenciae/beneficiosmetrofem.agenciaeaglesoftware.com/controller/conexion.php on line 9
+[15-Jan-2026 10:18:51 America/Bogota] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/agenciae/beneficiosmetrofem.agenciaeaglesoftware.com/controller/conexion.php:9
+Stack trace:
+#0 /home/agenciae/beneficiosmetrofem.agenciaeaglesoftware.com/controller/conexion.php(9): mysqli_connect()
+#1 /home/agenciae/beneficiosmetrofem.agenciaeaglesoftware.com/components/autorizarEntrega/search_user.php(5): include('/home/agenciae/...')
+#2 {main}
+  thrown in /home/agenciae/beneficiosmetrofem.agenciaeaglesoftware.com/controller/conexion.php on line 9
+[15-Jan-2026 10:19:10 America/Bogota] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/agenciae/beneficiosmetrofem.agenciaeaglesoftware.com/controller/conexion.php:9
+Stack trace:
+#0 /home/agenciae/beneficiosmetrofem.agenciaeaglesoftware.com/controller/conexion.php(9): mysqli_connect()
+#1 /home/agenciae/beneficiosmetrofem.agenciaeaglesoftware.com/components/autorizarEntrega/search_user.php(5): include('/home/agenciae/...')
+#2 {main}
+  thrown in /home/agenciae/beneficiosmetrofem.agenciaeaglesoftware.com/controller/conexion.php on line 9
+[15-Jan-2026 10:19:50 America/Bogota] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/agenciae/beneficiosmetrofem.agenciaeaglesoftware.com/controller/conexion.php:9
+Stack trace:
+#0 /home/agenciae/beneficiosmetrofem.agenciaeaglesoftware.com/controller/conexion.php(9): mysqli_connect()
+#1 /home/agenciae/beneficiosmetrofem.agenciaeaglesoftware.com/components/autorizarEntrega/search_user.php(5): include('/home/agenciae/...')
+#2 {main}
+  thrown in /home/agenciae/beneficiosmetrofem.agenciaeaglesoftware.com/controller/conexion.php on line 9
+[15-Jan-2026 10:30:15 America/Bogota] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/agenciae/beneficiosmetrofem.agenciaeaglesoftware.com/controller/conexion.php:9
+Stack trace:
+#0 /home/agenciae/beneficiosmetrofem.agenciaeaglesoftware.com/controller/conexion.php(9): mysqli_connect()
+#1 /home/agenciae/beneficiosmetrofem.agenciaeaglesoftware.com/components/autorizarEntrega/search_user.php(25): include('/home/agenciae/...')
+#2 {main}
+  thrown in /home/agenciae/beneficiosmetrofem.agenciaeaglesoftware.com/controller/conexion.php on line 9
+[15-Jan-2026 10:37:04 America/Bogota] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::get_result() in /home/agenciae/beneficiosmetrofem.agenciaeaglesoftware.com/components/autorizarEntrega/search_user.php:54
+Stack trace:
+#0 {main}
+  thrown in /home/agenciae/beneficiosmetrofem.agenciaeaglesoftware.com/components/autorizarEntrega/search_user.php on line 54
+[15-Jan-2026 10:37:10 America/Bogota] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::get_result() in /home/agenciae/beneficiosmetrofem.agenciaeaglesoftware.com/components/autorizarEntrega/search_user.php:54
+Stack trace:
+#0 {main}
+  thrown in /home/agenciae/beneficiosmetrofem.agenciaeaglesoftware.com/components/autorizarEntrega/search_user.php on line 54
+[15-Jan-2026 10:50:27 America/Bogota] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::get_result() in /home/agenciae/beneficiosmetrofem.agenciaeaglesoftware.com/components/autorizarEntrega/save_authorization.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/agenciae/beneficiosmetrofem.agenciaeaglesoftware.com/components/autorizarEntrega/save_authorization.php on line 29
