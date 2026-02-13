@@ -3,22 +3,23 @@ header('Content-Type: application/json');
 require_once __DIR__ . '/../../controller/conexion.php';
 
 // Verificar que se recibieron los parámetros necesarios
-if (!isset($_POST['student_id']) || !isset($_POST['course_id'])) {
+if (!isset($_POST['student_id']) || !isset($_POST['grade_level']) || !isset($_POST['course_type'])) {
     echo json_encode(['success' => false, 'message' => 'Faltan parámetros necesarios']);
     exit;
 }
 
 $studentId = $_POST['student_id'];
-$courseId = $_POST['course_id'];
+$gradeLevel = $_POST['grade_level'];
+$courseType = $_POST['course_type'];
 
 try {
-    // 1. Obtener el total de clases para el curso hasta la fecha actual
+    // 1. Obtener el total de clases para el grado y materia hasta la fecha actual
     $sqlTotalClasses = "SELECT COUNT(DISTINCT class_date) AS total_classes
                          FROM attendance_records
-                         WHERE course_id = ? AND class_date <= CURRENT_DATE()";
+                         WHERE grade_level = ? AND course_type = ? AND class_date <= CURRENT_DATE()";
     
     $stmtClasses = $conn->prepare($sqlTotalClasses);
-    $stmtClasses->bind_param('i', $courseId);
+    $stmtClasses->bind_param('ss', $gradeLevel, $courseType);
     $stmtClasses->execute();
     $resultClasses = $stmtClasses->get_result();
     $rowClasses = $resultClasses->fetch_assoc();
@@ -29,35 +30,37 @@ try {
     $sqlAttendance = "SELECT COUNT(*) AS total_attendance
                       FROM attendance_records
                       WHERE student_id = ? 
-                      AND course_id = ?
+                      AND grade_level = ?
+                      AND course_type = ?
                       AND class_date <= CURRENT_DATE() 
                       AND (attendance_status = 'presente' OR attendance_status = 'tarde')";
     
     $stmtAttendance = $conn->prepare($sqlAttendance);
-    $stmtAttendance->bind_param('si', $studentId, $courseId);
+    $stmtAttendance->bind_param('sss', $studentId, $gradeLevel, $courseType);
     $stmtAttendance->execute();
     $resultAttendance = $stmtAttendance->get_result();
     $rowAttendance = $resultAttendance->fetch_assoc();
     
     $totalAttendance = $rowAttendance['total_attendance'];
     
-    // 3. Obtener el número de inasistencias (solo cuando el status es 'ausente')
+    // 3. Obtener el número de inasistencias
     $sqlAbsences = "SELECT COUNT(*) AS total_absences
                     FROM attendance_records
                     WHERE student_id = ? 
-                    AND course_id = ?
+                    AND grade_level = ?
+                    AND course_type = ?
                     AND class_date <= CURRENT_DATE() 
                     AND attendance_status = 'ausente'";
     
     $stmtAbsences = $conn->prepare($sqlAbsences);
-    $stmtAbsences->bind_param('si', $studentId, $courseId);
+    $stmtAbsences->bind_param('sss', $studentId, $gradeLevel, $courseType);
     $stmtAbsences->execute();
     $resultAbsences = $stmtAbsences->get_result();
     $rowAbsences = $resultAbsences->fetch_assoc();
     
     $totalAbsences = $rowAbsences['total_absences'];
     
-    // Calcular porcentajes basados en el total de registros (no en total de clases)
+    // Calcular porcentajes
     $totalRecordsForStudent = $totalAttendance + $totalAbsences;
     
     if ($totalRecordsForStudent > 0) {
@@ -68,7 +71,6 @@ try {
         $absencePercentage = 0;
     }
     
-    // Preparar respuesta
     $response = [
         'success' => true,
         'data' => [

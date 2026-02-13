@@ -8,10 +8,11 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 $studentId = $_POST['student_id'] ?? '';
-$courseId = $_POST['course_id'] ?? '';
+$gradeLevel = $_POST['grade_level'] ?? '';
+$courseType = $_POST['course_type'] ?? '';
 $classDate = $_POST['class_date'] ?? '';
 
-if (empty($studentId) || empty($courseId) || empty($classDate)) {
+if (empty($studentId) || empty($gradeLevel) || empty($courseType) || empty($classDate)) {
     echo json_encode(['success' => false, 'message' => 'Parámetros faltantes']);
     exit;
 }
@@ -21,14 +22,14 @@ try {
             u.nombre as created_by_name 
             FROM class_observations co 
             LEFT JOIN users u ON co.created_by = u.username
-            WHERE co.student_id = ? AND co.course_id = ? AND co.class_date = ?";
+            WHERE co.student_id = ? AND co.grade_level = ? AND co.course_type = ? AND co.class_date = ?";
     
     $stmt = $conn->prepare($sql);
     if (!$stmt) {
         throw new Exception('Error en la preparación de consulta: ' . $conn->error);
     }
     
-    $stmt->bind_param("sis", $studentId, $courseId, $classDate);
+    $stmt->bind_param("ssss", $studentId, $gradeLevel, $courseType, $classDate);
     
     if (!$stmt->execute()) {
         throw new Exception('Error al ejecutar consulta: ' . $stmt->error);

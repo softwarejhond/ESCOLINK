@@ -9,14 +9,15 @@ ob_start(); // Iniciar buffer de salida para evitar salidas no deseadas
 require_once __DIR__ . '/../../controller/conexion.php';
 
 // Verificar que se recibieron los parámetros necesarios
-if (!isset($_POST['student_id']) || !isset($_POST['course_id'])) {
+if (!isset($_POST['student_id']) || !isset($_POST['grade_level']) || !isset($_POST['course_type'])) {
     echo json_encode(['success' => false, 'message' => 'Faltan parámetros necesarios']);
     exit;
 }
 
 // Limpiar y convertir tipos de datos
 $studentId = trim($_POST['student_id']);
-$courseId = intval($_POST['course_id']);
+$gradeLevel = trim($_POST['grade_level']);
+$courseType = trim($_POST['course_type']);
 $requiresIntervention = isset($_POST['requires_intervention']) ? trim($_POST['requires_intervention']) : null;
 $responsibleUsername = isset($_POST['responsible_username']) ? trim($_POST['responsible_username']) : null;
 $interventionObservation = isset($_POST['intervention_observation']) ? trim($_POST['intervention_observation']) : null;
@@ -35,20 +36,21 @@ try {
     
     // Siempre insertar un nuevo registro para mantener el historial
     $sql = "INSERT INTO student_attendance_management (
-                student_id, course_id, requires_intervention, 
+                student_id, grade_level, course_type, requires_intervention, 
                 responsible_username, intervention_observation, is_resolved,
                 requires_additional_strategy, strategy_observation, strategy_fulfilled,
                 withdrawal_reason, withdrawal_date
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     
     $stmt = $conn->prepare($sql);
     if (!$stmt) {
         throw new Exception("Error en la preparación de la consulta: " . $conn->error);
     }
     
-    $stmt->bind_param('sisssssssss',
+    $stmt->bind_param('ssssssssssss',
         $studentId,
-        $courseId,
+        $gradeLevel,
+        $courseType,
         $requiresIntervention,
         $responsibleUsername,
         $interventionObservation,

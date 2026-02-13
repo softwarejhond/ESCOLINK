@@ -174,22 +174,21 @@ $courses_data = getCourses();
                 <div class="container-fluid">
                     <div class="row align-items-end">
 
-                        <!-- Seleccionar docente -->
                         <!-- Selección de Bootcamp (Clase) -->
                         <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                             <label class="form-label">Clase</label>
                             <select id="bootcamp" class="form-select course-select">
+                                <option value="">Seleccione un grado</option>
                                 <?php
-                                $allowed_categories = [17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 30, 31, 32, 33, 34, 35];
-                                foreach ($courses_data as $course):
-                                    if (in_array($course['categoryid'], $allowed_categories)):
-                                ?>
-                                        <option value="<?= htmlspecialchars($course['id']) ?>">
-                                            <?= htmlspecialchars($course['id'] . ' - ' . $course['fullname']) ?>
-                                        </option>
-                                <?php
-                                    endif;
-                                endforeach;
+                                // Conexión a la base de datos (ya incluida arriba)
+                                $query = "SELECT DISTINCT grade_level FROM el_students WHERE grade_level IS NOT NULL AND grade_level <> '' ORDER BY grade_level ASC";
+                                $result = $conn->query($query);
+                                if ($result && $result->num_rows > 0) {
+                                    while ($row = $result->fetch_assoc()) {
+                                        $grade = htmlspecialchars($row['grade_level']);
+                                        echo "<option value=\"$grade\">$grade</option>";
+                                    }
+                                }
                                 ?>
                             </select>
                         </div>
@@ -203,36 +202,6 @@ $courses_data = getCourses();
                                 <option value="leveling_english">Inglés Nivelatorio</option>
                                 <option value="english_code">English Code</option>
                                 <option value="skills">Habilidas de poder</option>
-                            </select>
-                        </div>
-                        <!-- Selección de Modalidad -->
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                            <label class="form-label">Modalidad</label>
-                            <select name="modalidad" id="modalidad" class="form-select" onchange="toggleSede()">
-                                <option value="">Seleccione modalidad</option>
-                                <option value="virtual">Virtual</option>
-                                <option value="Presencial">Presencial</option>
-                            </select>
-                        </div>
-                        <!-- Selección de Sede -->
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-12"><br>
-                            <label class="form-label">Sede</label>
-                            <select name="sede" id="sede" class="form-select">
-                                <option value="">Seleccione una sede</option>
-                                <?php
-                                // Consulta para obtener las sedes desde la tabla groups
-                                $query = "SELECT DISTINCT headquarters FROM groups ORDER BY headquarters";
-                                $result = $conn->query($query);
-
-                                if ($result && $result->num_rows > 0) {
-                                    while ($row = $result->fetch_assoc()) {
-                                        $sede = $row['headquarters'];
-                                        echo '<option value="' . htmlspecialchars($sede) . '">' . htmlspecialchars($sede) . '</option>';
-                                    }
-                                } else {
-                                    echo '<option value="">No hay sedes disponibles</option>';
-                                }
-                                ?>
                             </select>
                         </div>
                         <!-- Selección de Fecha -->

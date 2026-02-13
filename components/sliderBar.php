@@ -75,7 +75,7 @@ require_once __DIR__ . '/../components/addUsers/swalAddUser.php';
                                 data-bs-trigger="hover focus"
                                 data-bs-placement="bottom"
                                 data-bs-content="Toma de asistencias por grupos">
-                                <a href="attendanceGroup.php">
+                                <a href="attendance.php">
                                     <label class="checkbox-wrapper">
                                         <span class="checkbox-tile">
                                             <span class="checkbox-icon">

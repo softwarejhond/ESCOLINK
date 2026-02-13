@@ -169,9 +169,9 @@ function normalizeGender($value) {
 
 function normalizeStatus($value) {
     $value = strtoupper(trim($value));
-    $valid = ['ACTIVO', 'RETIRADO', 'GRADUADO', 'SUSPENDIDO'];
+    $valid = ['NUEVO', 'RENOVACION', 'REPITENTE', 'CANCELADO', 'PENDIENTE RENOVACIÓN', 'ASUMIDO'];
     if (in_array($value, $valid)) return $value;
-    return 'ACTIVO'; // default
+    return 'NUEVO'; // default
 }
 
 function normalizeDocumentType($value) {
@@ -215,28 +215,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['excel_file'])) {
                 $row = array_pad($row, 17, ''); // Ahora son 17 columnas
 
                 $document_type = normalizeDocumentType($row[0]);
-                $document_number = (int)preg_replace('/\D/', '', $row[1]);
-                $student_code = trim($row[2]);
-                $name = normalizeText($row[3]);
-                $birth_date = !empty(trim($row[4])) ? date('Y-m-d', strtotime(str_replace('/', '-', $row[4]))) : null;
-                $gender = normalizeGender($row[5]);
-                $grade_level = trim($row[6]);
-                $group_section = trim($row[7]);
-                $blood_type = trim($row[8]);
+                $simat = trim($row[1]);
+                $document_number = (int)preg_replace('/\D/', '', $row[2]);
+                $student_code = trim($row[3]);
+                $name = normalizeText($row[4]);
+                $registration_date = !empty(trim($row[5])) ? date('Y-m-d', strtotime(str_replace('/', '-', $row[5]))) : date('Y-m-d');
+                $gender = normalizeGender($row[6]);
+                $grade_level = trim($row[7]);
+                $group_section = trim($row[8]);
                 $email = trim($row[9]);
                 $cell_phone = preg_replace('/\D/', '', $row[10]);
-                $address = trim($row[11]);
-                $city = normalizeText($row[12]);
-                $guardian_name = trim($row[13]);
-                $guardian_phone = preg_replace('/\D/', '', $row[14]);
-                $sede = trim($row[15]);
-                $status = normalizeStatus($row[16]);
-                $registration_date = date('Y-m-d'); // Fecha de registro por defecto
+                $cell_phone2 = preg_replace('/\D/', '', $row[11]);
+                $address = trim($row[12]);
+                $barrio = trim($row[13]);
+                $comuna = trim($row[14]);
+                $city = normalizeText($row[15]);
+                $sede = trim($row[16]);
+                $status = normalizeStatus($row[17]);
+                writeErrorToLog("DEBUG - Fila $rowNumber: row[17]='" . $row[17] . "', status='$status'");
                 $updated_by = null; // Definir variable para updated_by
 
                 // Validar campos obligatorios
-                if (empty($document_number) || empty($name) || empty($birth_date) || empty($grade_level)) {
-                    $errorMsg = "Fila $rowNumber inválida: document_number=$document_number, name='$name', birth_date='$birth_date', grade_level='$grade_level'";
+                if (empty($document_number) || empty($name) || empty($registration_date) || empty($grade_level)) {
+                    $errorMsg = "Fila $rowNumber inválida: document_number=$document_number, name='$name', registration_date='$registration_date', grade_level='$grade_level'";
                     $errors[] = $errorMsg;
                     writeErrorToLog("ERROR VALIDACIÓN - $errorMsg");
                     continue;
@@ -255,8 +256,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['excel_file'])) {
 
                 if ($count > 0) {
                     // Actualizar
-                    $stmt = $conn->prepare("UPDATE el_students SET student_code=?, document_type=?, name=?, birth_date=?, grade_level=?, group_section=?, blood_type=?, gender=?, email=?, cell_phone=?, address=?, city=?, guardian_name=?, guardian_phone=?, status=?, registration_date=?, sede=?, updated_by=? WHERE document_number=?");
-                    $stmt->bind_param("ssssssssssssssssssi", $student_code, $document_type, $name, $birth_date, $grade_level, $group_section, $blood_type, $gender, $email, $cell_phone, $address, $city, $guardian_name, $guardian_phone, $status, $registration_date, $sede, $updated_by, $document_number);
+                    $stmt = $conn->prepare("UPDATE el_students SET student_code=?, document_type=?, name=?, grade_level=?, gender=?, email=?, cell_phone=?, address=?, city=?, status=?, registration_date=?, sede=?, simat=?, cell_phone2=?, barrio=?, comuna=?, updated_by=? WHERE document_number=?");
+                    $stmt->bind_param("sssssssssssssssssi", $student_code, $document_type, $name, $grade_level, $gender, $email, $cell_phone, $address, $city, $status, $registration_date, $sede, $simat, $cell_phone2, $barrio, $comuna, $updated_by, $document_number);
                     if ($stmt->execute()) {
                         $updates++;
                         writeErrorToLog("SUCCESS - Fila $rowNumber: Estudiante $document_number actualizado correctamente");
@@ -267,8 +268,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['excel_file'])) {
                     }
                 } else {
                     // Insertar
-                    $stmt = $conn->prepare("INSERT INTO el_students (student_code, document_type, document_number, name, birth_date, grade_level, group_section, blood_type, gender, email, cell_phone, address, city, guardian_name, guardian_phone, status, registration_date, sede, updated_by) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-                    $stmt->bind_param("ssissssssssssssssss", $student_code, $document_type, $document_number, $name, $birth_date, $grade_level, $group_section, $blood_type, $gender, $email, $cell_phone, $address, $city, $guardian_name, $guardian_phone, $status, $registration_date, $sede, $updated_by);
+                    $stmt = $conn->prepare("INSERT INTO el_students (student_code, document_type, document_number, name, grade_level, gender, email, cell_phone, address, city, status, registration_date, sede, simat, cell_phone2, barrio, comuna, updated_by) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                    $stmt->bind_param("ssisssssssssssssss", $student_code, $document_type, $document_number, $name, $grade_level, $gender, $email, $cell_phone, $address, $city, $status, $registration_date, $sede, $simat, $cell_phone2, $barrio, $comuna, $updated_by);
                     if ($stmt->execute()) {
                         $inserts++;
                         writeErrorToLog("SUCCESS - Fila $rowNumber: Estudiante $document_number insertado correctamente");
