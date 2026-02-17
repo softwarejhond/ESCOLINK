@@ -4,20 +4,17 @@ ini_set('display_errors', 0);
 ini_set('log_errors', 1);
 
 header('Content-Type: application/json');
-ob_start(); // Iniciar buffer de salida para evitar salidas no deseadas
+ob_start();
 
 require_once __DIR__ . '/../../controller/conexion.php';
 
-// Verificar que se recibieron los parámetros necesarios
-if (!isset($_POST['student_id']) || !isset($_POST['grade_level']) || !isset($_POST['course_type'])) {
+if (!isset($_POST['student_id']) || !isset($_POST['grade_level'])) {
     echo json_encode(['success' => false, 'message' => 'Faltan parámetros necesarios']);
     exit;
 }
 
-// Limpiar y convertir tipos de datos
 $studentId = trim($_POST['student_id']);
 $gradeLevel = trim($_POST['grade_level']);
-$courseType = trim($_POST['course_type']);
 $requiresIntervention = isset($_POST['requires_intervention']) ? trim($_POST['requires_intervention']) : null;
 $responsibleUsername = isset($_POST['responsible_username']) ? trim($_POST['responsible_username']) : null;
 $interventionObservation = isset($_POST['intervention_observation']) ? trim($_POST['intervention_observation']) : null;
@@ -29,28 +26,25 @@ $withdrawalReason = isset($_POST['withdrawal_reason']) ? trim($_POST['withdrawal
 $withdrawalDate = !empty($_POST['withdrawal_date']) ? trim($_POST['withdrawal_date']) : null;
 
 try {
-    // Verificar la conexión a la base de datos
     if (!$conn) {
         throw new Exception("Error de conexión a la base de datos");
     }
     
-    // Siempre insertar un nuevo registro para mantener el historial
     $sql = "INSERT INTO student_attendance_management (
-                student_id, grade_level, course_type, requires_intervention, 
+                student_id, grade_level, requires_intervention, 
                 responsible_username, intervention_observation, is_resolved,
                 requires_additional_strategy, strategy_observation, strategy_fulfilled,
                 withdrawal_reason, withdrawal_date
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     
     $stmt = $conn->prepare($sql);
     if (!$stmt) {
         throw new Exception("Error en la preparación de la consulta: " . $conn->error);
     }
     
-    $stmt->bind_param('ssssssssssss',
+    $stmt->bind_param('sssssssssss',
         $studentId,
         $gradeLevel,
-        $courseType,
         $requiresIntervention,
         $responsibleUsername,
         $interventionObservation,
@@ -63,19 +57,19 @@ try {
     );
     
     if ($stmt->execute()) {
-        ob_clean(); // Limpiar cualquier salida no deseada
+        ob_clean();
         echo json_encode(['success' => true]);
     } else {
         throw new Exception("Error al ejecutar la consulta: " . $stmt->error);
     }
     
 } catch (Exception $e) {
-    ob_clean(); // Limpiar cualquier salida no deseada
+    ob_clean();
     echo json_encode([
         'success' => false,
         'message' => 'Error al guardar datos de gestión: ' . $e->getMessage()
     ]);
 }
 
-ob_end_flush(); // Enviar el buffer de salida
+ob_end_flush();
 ?>

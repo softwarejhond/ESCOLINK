@@ -44,72 +44,54 @@ try {
     }
     $stmtStudents->close();
 
-    // Definir las materias
-    $courseTypes = ['matematicas', 'espanol', 'ingles', 'ciencias', 'tecnologia'];
+    // Obtener fechas de clases registradas para este grado
+    $sqlClasses = "SELECT DISTINCT class_date 
+                   FROM attendance_records 
+                   WHERE grade_level = ?
+                   ORDER BY class_date ASC";
     
-    $data = [];
-    $classes = [];
+    $stmtClasses = $conn->prepare($sqlClasses);
+    if (!$stmtClasses) {
+        throw new Exception('Error al preparar consulta de clases: ' . $conn->error);
+    }
+    
+    $stmtClasses->bind_param('s', $gradeLevel);
+    $stmtClasses->execute();
+    $resultClasses = $stmtClasses->get_result();
+    
+    $classDates = [];
+    while ($row = $resultClasses->fetch_assoc()) {
+        $classDates[] = ['class_date' => $row['class_date']];
+    }
+    $stmtClasses->close();
 
-    foreach ($courseTypes as $courseType) {
-        // Todos los estudiantes van en todas las materias
-        $data[$courseType] = $students;
-
-        // Obtener fechas de clases registradas para este grado y materia
-        $sqlClasses = "SELECT DISTINCT class_date 
-                       FROM attendance_records 
-                       WHERE grade_level = ? AND course_type = ?
-                       ORDER BY class_date ASC";
+    // Para cada fecha de clase, obtener la asistencia de cada estudiante
+    foreach ($classDates as $index => $classInfo) {
+        $classDate = $classInfo['class_date'];
+        $classDates[$index]['attendance_by_student'] = [];
         
-        $stmtClasses = $conn->prepare($sqlClasses);
-        if (!$stmtClasses) {
-            $classes[$courseType] = [];
-            continue;
-        }
+        // Obtener asistencia de todos los estudiantes para esta fecha
+        $sqlAttendance = "SELECT student_id, attendance_status 
+                          FROM attendance_records 
+                          WHERE grade_level = ? AND class_date = ?";
         
-        $stmtClasses->bind_param('ss', $gradeLevel, $courseType);
-        $stmtClasses->execute();
-        $resultClasses = $stmtClasses->get_result();
-        
-        $classDates = [];
-        while ($row = $resultClasses->fetch_assoc()) {
-            $classDates[] = ['class_date' => $row['class_date']];
-        }
-        $stmtClasses->close();
-
-        // Para cada fecha de clase, obtener la asistencia de cada estudiante
-        foreach ($classDates as $index => $classInfo) {
-            $classDate = $classInfo['class_date'];
-            $classDates[$index]['attendance_by_student'] = [];
+        $stmtAttendance = $conn->prepare($sqlAttendance);
+        if ($stmtAttendance) {
+            $stmtAttendance->bind_param('ss', $gradeLevel, $classDate);
+            $stmtAttendance->execute();
+            $resultAttendance = $stmtAttendance->get_result();
             
-            foreach ($students as $student) {
-                $sqlAttendance = "SELECT attendance_status 
-                                  FROM attendance_records 
-                                  WHERE student_id = ? AND grade_level = ? AND course_type = ? AND class_date = ?
-                                  LIMIT 1";
-                
-                $stmtAttendance = $conn->prepare($sqlAttendance);
-                if ($stmtAttendance) {
-                    $docNumber = (string)$student['document_number'];
-                    $stmtAttendance->bind_param('ssss', $docNumber, $gradeLevel, $courseType, $classDate);
-                    $stmtAttendance->execute();
-                    $resultAttendance = $stmtAttendance->get_result();
-                    $rowAttendance = $resultAttendance->fetch_assoc();
-                    
-                    if ($rowAttendance) {
-                        $classDates[$index]['attendance_by_student'][$student['document_number']] = $rowAttendance['attendance_status'];
-                    }
-                    $stmtAttendance->close();
-                }
+            while ($rowAttendance = $resultAttendance->fetch_assoc()) {
+                $classDates[$index]['attendance_by_student'][$rowAttendance['student_id']] = $rowAttendance['attendance_status'];
             }
+            $stmtAttendance->close();
         }
-
-        $classes[$courseType] = $classDates;
     }
 
     echo json_encode([
         'success' => true,
-        'data' => $data,
-        'classes' => $classes,
+        'data' => $students,
+        'classes' => $classDates,
         'total_students' => count($students)
     ]);
 

@@ -27,24 +27,23 @@ if (!$data) {
 }
 
 $grade_level = $data['grade_level'] ?? null;
-$courseType = $data['courseType'] ?? null;
 $class_date = $data['class_date'] ?? null;
 $attendance = $data['attendance'] ?? [];
 
-if (empty($grade_level) || empty($courseType) || empty($class_date)) {
+if (empty($grade_level) || empty($class_date)) {
     echo json_encode(['error' => 'Faltan datos requeridos']);
     exit;
 }
 
-// Verificar que no existan registros para esta fecha, grado y materia
-$sqlCheck = "SELECT COUNT(*) as count FROM attendance_records WHERE grade_level = ? AND course_type = ? AND class_date = ?";
+// Verificar que no existan registros para esta fecha y grado
+$sqlCheck = "SELECT COUNT(*) as count FROM attendance_records WHERE grade_level = ? AND class_date = ?";
 $stmtCheck = mysqli_prepare($conn, $sqlCheck);
 if (!$stmtCheck) {
     echo json_encode(['error' => 'Error al preparar consulta de verificación: ' . mysqli_error($conn)]);
     exit;
 }
 
-mysqli_stmt_bind_param($stmtCheck, "sss", $grade_level, $courseType, $class_date);
+mysqli_stmt_bind_param($stmtCheck, "ss", $grade_level, $class_date);
 if (!mysqli_stmt_execute($stmtCheck)) {
     echo json_encode(['error' => 'Error al ejecutar consulta de verificación: ' . mysqli_stmt_error($stmtCheck)]);
     exit;
@@ -55,7 +54,7 @@ $rowCheck = mysqli_fetch_assoc($resultCheck);
 
 if ($rowCheck && $rowCheck['count'] > 0) {
     echo json_encode([
-        'error' => 'Ya se ha registrado asistencia para este grado y materia en esta fecha. No es posible registrar asistencia dos veces para la misma fecha.'
+        'error' => 'Ya se ha registrado asistencia para este grado en esta fecha. No es posible registrar asistencia dos veces para la misma fecha.'
     ]);
     exit;
 }
@@ -99,8 +98,8 @@ mysqli_begin_transaction($conn);
 try {
     // Preparar la consulta de inserción (sin columnas sede y recorded_hours)
     $sql = "INSERT INTO attendance_records 
-            (teacher_id, student_id, grade_level, course_type, modality, class_date, attendance_status)
-            VALUES (?, ?, ?, ?, ?, ?, ?)";
+            (teacher_id, student_id, grade_level, modality, class_date, attendance_status)
+            VALUES (?, ?, ?, ?, ?, ?)";
 
     $stmt = mysqli_prepare($conn, $sql);
 
@@ -115,11 +114,10 @@ try {
         $modality = 'Presencial'; // Valor por defecto, puedes ajustarlo según necesites
 
         // Insertar registro de asistencia (sin sede y recorded_hours)
-        mysqli_stmt_bind_param($stmt, "sssssss", 
+        mysqli_stmt_bind_param($stmt, "ssssss", 
             $teacher_id,      // teacher_id
             $student_id,      // student_id 
             $grade_level,     // grade_level
-            $courseType,      // course_type
             $modality,        // modality
             $class_date,      // class_date
             $status          // attendance_status

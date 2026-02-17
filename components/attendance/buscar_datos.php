@@ -18,23 +18,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Recoger y validar datos
     $grade_level = $_POST['grade_level'] ?? '';
-    $courseType  = $_POST['courseType'] ?? '';
     $class_date  = $_POST['class_date'] ?? '';
 
-    if (empty($grade_level) || empty($courseType) || empty($class_date)) {
+    if (empty($grade_level) || empty($class_date)) {
         echo json_encode(['error' => 'Faltan datos requeridos']);
         exit;
     }
 
-    // Verificar si ya existe registro de asistencia para esta fecha, grado y materia
-    $sqlCheck = "SELECT COUNT(*) as count FROM attendance_records WHERE grade_level = ? AND course_type = ? AND class_date = ?";
+    // Verificar si ya existe registro de asistencia para esta fecha y grado
+    $sqlCheck = "SELECT COUNT(*) as count FROM attendance_records WHERE grade_level = ? AND class_date = ?";
     $stmtCheck = mysqli_prepare($conn, $sqlCheck);
     if (!$stmtCheck) {
         echo json_encode(['error' => 'Error al preparar consulta de verificación: ' . mysqli_error($conn)]);
         exit;
     }
 
-    mysqli_stmt_bind_param($stmtCheck, "sss", $grade_level, $courseType, $class_date);
+    mysqli_stmt_bind_param($stmtCheck, "ss", $grade_level, $class_date);
     if (!mysqli_stmt_execute($stmtCheck)) {
         echo json_encode(['error' => 'Error al ejecutar consulta de verificación: ' . mysqli_stmt_error($stmtCheck)]);
         exit;
@@ -44,10 +43,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $rowCheck = mysqli_fetch_assoc($resultCheck);
     
     if ($rowCheck && $rowCheck['count'] > 0) {
-        // Ya existe un registro para este grado, materia y fecha
+        // Ya existe un registro para este grado y fecha
         echo json_encode([
             'exists' => true, 
-            'message' => 'Ya se ha registrado asistencia para este grado y materia en esta fecha. No es posible registrar asistencia dos veces para la misma fecha.'
+            'message' => 'Ya se ha registrado asistencia para este grado en esta fecha. No es posible registrar asistencia dos veces para la misma fecha.'
         ]);
         exit;
     }
@@ -124,8 +123,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Devolver contenido de tabla simplificado
     echo json_encode([
         'html' => $tableContent,
-        'grade_level' => $grade_level,
-        'course_type' => $courseType
+        'grade_level' => $grade_level
     ]);
     exit;
 }

@@ -3,13 +3,13 @@ header('Content-Type: application/json');
 require_once __DIR__ . '/../../controller/conexion.php';
 
 // Verificar que se recibieron los parámetros necesarios
-if (!isset($_POST['student_id']) || !isset($_POST['course_id'])) {
+if (!isset($_POST['student_id']) || !isset($_POST['grade_level'])) {
     echo json_encode(['success' => false, 'message' => 'Faltan parámetros necesarios']);
     exit;
 }
 
 $studentId = $_POST['student_id'];
-$courseId = $_POST['course_id'];
+$gradeLevel = $_POST['grade_level'];
 
 try {
     // Consulta con JOIN para obtener el nombre del responsable para todos los registros
@@ -17,11 +17,11 @@ try {
             DATE_FORMAT(sam.created_at, '%d/%m/%Y %H:%i') as formatted_date
             FROM student_attendance_management sam
             LEFT JOIN users u ON sam.responsible_username = u.username
-            WHERE sam.student_id = ? AND sam.course_id = ?
+            WHERE sam.student_id = ? AND sam.grade_level = ?
             ORDER BY sam.created_at DESC";
     
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param('si', $studentId, $courseId);
+    $stmt->bind_param('ss', $studentId, $gradeLevel);
     $stmt->execute();
     $result = $stmt->get_result();
     

@@ -3,7 +3,7 @@
 $server = "localhost";
 $username = "root";
 $password = "";
-$bd = "dash_privado";
+$bd = "escolink";
 
 //creamos una conexión
 $conn = mysqli_connect($server, $username, $password, $bd);

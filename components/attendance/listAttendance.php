@@ -50,7 +50,7 @@ if (session_status() == PHP_SESSION_NONE) {
                 <div class="container-fluid">
                     <div class="row align-items-end">
                         <!-- Selección de Grado -->
-                        <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                             <label class="form-label">Grado</label>
                             <select id="grade_level" class="form-select" name="grade_level">
                                 <option value="">Seleccione un grado</option>
@@ -100,21 +100,8 @@ if (session_status() == PHP_SESSION_NONE) {
                             </select>
                         </div>
 
-                        <!-- Selección de Materia -->
-                        <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-                            <label class="form-label">Materia</label>
-                            <select id="courseType" class="form-select">
-                                <option value="">Seleccione materia</option>
-                                <option value="matematicas">Matemáticas</option>
-                                <option value="espanol">Español</option>
-                                <option value="ingles">Inglés</option>
-                                <option value="ciencias">Ciencias</option>
-                                <option value="tecnologia">Tecnología</option>
-                            </select>
-                        </div>
-
                         <!-- Selección de Fecha -->
-                        <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                             <label class="form-label">Fecha</label>
                             <input type="date" name="class_date" id="class_date" class="form-control" required max="<?= date('Y-m-d'); ?>">
                         </div>
@@ -160,30 +147,15 @@ if (session_status() == PHP_SESSION_NONE) {
     <script>
         $(document).ready(function() {
 
-            // Función para validar los campos y habilitar los botones de exportar
-            const validateExportButton = () => {
-                const gradeLevel = $('#grade_level').val();
-                const courseType = $('#courseType').val();
-                const fecha = $('#class_date').val();
-
-                // Habilitar los botones si todos los campos están completos
-                if (gradeLevel && courseType && fecha) {
-                    $('#exportarExcel').prop('disabled', false);
-                } else {
-                    $('#exportarExcel').prop('disabled', true);
-                }
-            };
-
             // Función para actualizar la tabla
             const updateTable = () => {
                 const data = {
                     grade_level: $('#grade_level').val(),
-                    courseType: $('#courseType').val(),
                     class_date: $('#class_date').val()
                 };
 
                 // Verificar que todos los campos requeridos tengan valor
-                if (!data.grade_level || !data.courseType || !data.class_date) {
+                if (!data.grade_level || !data.class_date) {
                     console.log('Por favor, complete todos los campos');
                     $('#listaInscritos tbody').html('');
                     return;
@@ -204,7 +176,7 @@ if (session_status() == PHP_SESSION_NONE) {
                                 confirmButtonText: 'Entendido'
                             });
                             $('#saveAttendance').prop('disabled', true);
-                            $('#listaInscritos tbody').html('<tr><td colspan="7" class="text-center">Ya existe asistencia registrada para este grado y materia en esta fecha</td></tr>');
+                            $('#listaInscritos tbody').html('<tr><td colspan="7" class="text-center">Ya existe asistencia registrada para este grado en esta fecha</td></tr>');
                             return;
                         }
 
@@ -213,9 +185,6 @@ if (session_status() == PHP_SESSION_NONE) {
 
                         if (response && response.html) {
                             $('#listaInscritos tbody').html(response.html);
-
-                            // Habilitar el botón de exportar cuando hay datos
-                            validateExportButton();
                         } else {
                             $('#listaInscritos tbody').html('<tr><td colspan="7" class="text-center">No se encontraron registros</td></tr>');
                         }
@@ -228,13 +197,9 @@ if (session_status() == PHP_SESSION_NONE) {
             };
 
             // Actualizar la tabla cuando se cambie algún filtro
-            $('#grade_level, #courseType, #class_date').change(function() {
-                validateExportButton();
+            $('#grade_level, #class_date').change(function() {
                 updateTable();
             });
-
-            // Verificar estado inicial del botón de exportar
-            validateExportButton();
         });
 
         // Guardar asistencia
@@ -258,7 +223,6 @@ if (session_status() == PHP_SESSION_NONE) {
 
             const postData = {
                 grade_level: $('#grade_level').val(),
-                courseType: $('#courseType').val(),
                 class_date: $('#class_date').val(),
                 attendance: attendanceData
             };
@@ -295,14 +259,13 @@ if (session_status() == PHP_SESSION_NONE) {
         $('#exportarExcel').click(function() {
             // Verificar que se haya seleccionado todo
             const gradeLevel = $('#grade_level').val();
-            const courseType = $('#courseType').val();
             const fecha = $('#class_date').val();
 
-            if (!gradeLevel || !courseType || !fecha) {
+            if (!gradeLevel || !fecha) {
                 Swal.fire({
                     icon: 'warning',
                     title: 'Información incompleta',
-                    text: 'Por favor, seleccione grado, materia y fecha para exportar'
+                    text: 'Por favor, seleccione grado y fecha para exportar'
                 });
                 return;
             }
@@ -317,12 +280,6 @@ if (session_status() == PHP_SESSION_NONE) {
                 type: 'hidden',
                 name: 'grade_level',
                 value: gradeLevel
-            }));
-
-            form.append($('<input>', {
-                type: 'hidden',
-                name: 'course_type',
-                value: courseType
             }));
 
             form.append($('<input>', {
@@ -345,7 +302,7 @@ if (session_status() == PHP_SESSION_NONE) {
             Swal.fire({
                 icon: 'info',
                 title: 'Recordatorio',
-                text: 'Solo puede registrar asistencia una vez por grado y materia en cada fecha. Por favor, asegúrese de completar toda la información correctamente.',
+                text: 'Solo puede registrar asistencia una vez por grado en cada fecha. Por favor, asegúrese de completar toda la información correctamente.',
                 confirmButtonText: 'Entendido'
             });
         });

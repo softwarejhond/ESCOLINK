@@ -3018,3 +3018,311 @@
 [2026-02-13 20:15:32] [EMERGENCY] Filas vacías omitidas: 0
 [2026-02-13 20:15:32] [EMERGENCY] Total de errores: 0
 [2026-02-13 20:15:32] [EMERGENCY] === FIN DE IMPORTACIÓN ===
+[2026-02-17 00:55:21] [EMERGENCY] === INICIO DE IMPORTACIÓN ===
+[2026-02-17 00:55:21] [EMERGENCY] Archivo procesado: datos prueba.xlsx
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 2: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 2: Estudiante 62156675 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 3: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 3: Estudiante 52183009 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 4: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 4: Estudiante 19272037 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 5: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 5: Estudiante 17264317 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 6: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 6: Estudiante 56236374 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 7: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 7: Estudiante 19663779 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 8: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 8: Estudiante 23498297 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 9: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 9: Estudiante 33096603 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 10: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 10: Estudiante 96438053 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 11: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 11: Estudiante 54569017 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 12: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 12: Estudiante 42711282 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 13: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 13: Estudiante 57972010 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 14: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 14: Estudiante 42092764 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 15: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 15: Estudiante 60175091 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 16: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 16: Estudiante 88820171 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 17: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 17: Estudiante 29620031 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 18: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 18: Estudiante 46437814 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 19: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 19: Estudiante 87414619 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 20: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 20: Estudiante 85140395 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 21: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 21: Estudiante 10926408 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 22: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 22: Estudiante 61616757 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 23: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 23: Estudiante 19876467 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 24: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 24: Estudiante 91393633 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 25: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 25: Estudiante 54933132 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 26: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 26: Estudiante 63679397 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 27: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 27: Estudiante 68805753 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 28: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 28: Estudiante 78707814 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 29: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 29: Estudiante 69838446 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 30: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 30: Estudiante 97581790 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 31: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 31: Estudiante 98103844 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 32: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 32: Estudiante 64617119 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 33: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 33: Estudiante 43996843 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 34: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 34: Estudiante 52186239 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 35: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 35: Estudiante 29328357 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 36: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 36: Estudiante 68061977 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 37: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 37: Estudiante 90919064 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 38: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 38: Estudiante 65261300 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 39: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 39: Estudiante 66693159 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 40: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 40: Estudiante 64389067 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 41: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 41: Estudiante 44272102 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 42: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 42: Estudiante 28481777 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 43: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 43: Estudiante 22068368 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 44: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 44: Estudiante 30351319 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 45: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 45: Estudiante 42879199 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 46: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 46: Estudiante 82428725 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 47: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 47: Estudiante 79980351 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 48: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 48: Estudiante 79107914 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 49: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 49: Estudiante 35719847 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 50: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 50: Estudiante 31589449 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 51: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 51: Estudiante 32611724 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 52: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 52: Estudiante 55224280 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 53: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 53: Estudiante 96929787 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 54: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 54: Estudiante 19357503 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 55: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 55: Estudiante 44801356 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 56: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 56: Estudiante 29672098 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 57: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 57: Estudiante 20801014 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 58: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 58: Estudiante 33032692 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 59: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 59: Estudiante 69044362 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 60: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 60: Estudiante 74829297 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 61: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 61: Estudiante 86781768 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 62: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 62: Estudiante 38821070 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 63: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 63: Estudiante 70492112 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 64: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 64: Estudiante 39480057 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 65: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 65: Estudiante 24476541 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 66: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 66: Estudiante 26834943 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 67: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 67: Estudiante 71952220 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 68: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 68: Estudiante 43814807 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 69: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 69: Estudiante 48646077 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 70: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 70: Estudiante 56092866 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 71: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 71: Estudiante 18888556 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 72: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 72: Estudiante 74430227 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 73: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 73: Estudiante 94207367 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 74: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 74: Estudiante 29519641 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 75: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 75: Estudiante 94421235 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 76: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 76: Estudiante 29329248 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 77: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 77: Estudiante 41233653 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 78: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 78: Estudiante 98946326 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 79: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 79: Estudiante 44326626 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 80: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 80: Estudiante 32921047 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 81: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 81: Estudiante 29954428 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 82: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 82: Estudiante 80110223 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 83: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 83: Estudiante 32037345 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 84: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 84: Estudiante 31021056 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 85: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 85: Estudiante 55755433 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 86: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 86: Estudiante 37654889 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 87: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 87: Estudiante 53642260 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 88: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 88: Estudiante 15850954 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 89: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 89: Estudiante 14178661 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 90: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 90: Estudiante 60130127 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 91: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 91: Estudiante 72886487 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 92: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 92: Estudiante 71038671 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 93: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 93: Estudiante 15922355 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 94: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 94: Estudiante 34991992 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 95: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 95: Estudiante 66171395 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 96: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 96: Estudiante 56618385 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 97: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 97: Estudiante 71841005 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 98: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 98: Estudiante 53602789 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 99: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 99: Estudiante 67554599 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 100: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 100: Estudiante 14030528 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-17 00:55:23] [EMERGENCY] DEBUG - Fila 101: row[17]='', status='NUEVO'
+[2026-02-17 00:55:23] [EMERGENCY] SUCCESS - Fila 101: Estudiante 47945355 insertado correctamente
+[2026-02-17 00:55:23] [EMERGENCY] === RESUMEN DE IMPORTACIÓN ===
+[2026-02-17 00:55:23] [EMERGENCY] Nuevos registros: 100
+[2026-02-17 00:55:23] [EMERGENCY] Registros actualizados: 0
+[2026-02-17 00:55:23] [EMERGENCY] Filas vacías omitidas: 0
+[2026-02-17 00:55:23] [EMERGENCY] Total de errores: 0
+[2026-02-17 00:55:23] [EMERGENCY] === FIN DE IMPORTACIÓN ===

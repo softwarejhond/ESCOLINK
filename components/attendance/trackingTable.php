@@ -11,59 +11,29 @@ if (session_status() == PHP_SESSION_NONE) {
 <style>
     .table-responsive {
         overflow-x: auto;
-        max-width: 100%;
+        width: 100%;
     }
 
     .datatable {
         width: 100%;
-        table-layout: auto;
+        table-layout: auto; /* Permite que el navegador calcule el ancho de las columnas */
     }
 
     .datatable th,
     .datatable td {
-        white-space: nowrap;
-        min-width: 120px;
+        white-space: normal; /* Permite que el texto se ajuste a la siguiente línea */
+        word-wrap: break-word; /* Fuerza el corte de palabras largas si es necesario */
         padding: 8px 12px;
         vertical-align: middle;
         text-align: center;
     }
 
-    .datatable th:nth-child(1),
-    .datatable td:nth-child(1) {
-        min-width: 80px;
-    }
-
-    .datatable th:nth-child(2),
-    .datatable td:nth-child(2) {
-        min-width: 100px;
-    }
-
+    /* Ajuste específico para columnas con texto largo para que se alineen a la izquierda */
     .datatable th:nth-child(3),
-    .datatable td:nth-child(3) {
-        min-width: 200px;
-        text-align: left;
-    }
-
+    .datatable td:nth-child(3),
     .datatable th:nth-child(4),
     .datatable td:nth-child(4) {
-        min-width: 220px;
         text-align: left;
-    }
-
-    .datatable th:nth-child(5),
-    .datatable td:nth-child(5) {
-        min-width: 120px;
-    }
-
-    .datatable th:nth-child(6),
-    .datatable td:nth-child(6) {
-        min-width: 100px;
-    }
-
-    /* Columnas de clases dinámicas */
-    .datatable th:nth-child(n+7),
-    .datatable td:nth-child(n+7) {
-        min-width: 80px;
     }
 
     .observation-modal .modal-dialog {
@@ -210,7 +180,7 @@ if (session_status() == PHP_SESSION_NONE) {
 </div>
 
 <!-- Contenedor para centrar los Nav tabs -->
-<div class="d-flex justify-content-center">
+<!-- <div class="d-flex justify-content-center">
     <ul class="nav nav-tabs" id="studentsTab" role="tablist">
         <li class="nav-item" role="presentation">
             <button class="nav-link active" id="matematicas-tab" data-bs-toggle="tab" data-bs-target="#matematicas-tab-pane" type="button" role="tab" aria-controls="matematicas-tab-pane" aria-selected="true">
@@ -238,37 +208,13 @@ if (session_status() == PHP_SESSION_NONE) {
             </button>
         </li>
     </ul>
-</div>
+</div> -->
 
 <!-- Contenedor para las tablas de estudiantes -->
 <div id="studentsContainer" class="card shadow" style="display: none;">
     <div class="card-body">
-        <div class="tab-content mt-3 container-fluid px-0" id="studentsTabContent">
-
-            <?php
-            $materias = ['matematicas', 'espanol', 'ingles', 'ciencias', 'tecnologia'];
-            foreach ($materias as $index => $materia):
-                $isActive = $index === 0 ? 'show active' : '';
-            ?>
-                <div class="tab-pane fade <?= $isActive ?>" id="<?= $materia ?>-tab-pane" role="tabpanel" aria-labelledby="<?= $materia ?>-tab" tabindex="0">
-                    <div class="table-responsive">
-                        <table class="table table-striped table-hover datatable" id="<?= $materia ?>-table">
-                            <thead>
-                                <tr>
-                                    <th>Tipo ID</th>
-                                    <th>Documento</th>
-                                    <th>Nombre</th>
-                                    <th>Correo</th>
-                                    <th>Teléfono</th>
-                                    <th>Estado</th>
-                                </tr>
-                            </thead>
-                            <tbody></tbody>
-                        </table>
-                    </div>
-                </div>
-            <?php endforeach; ?>
-
+        <div class="table-responsive">
+            <!-- La tabla se genera dinámicamente -->
         </div>
     </div>
 </div>
@@ -281,9 +227,6 @@ if (session_status() == PHP_SESSION_NONE) {
 
 <script>
     $(document).ready(function() {
-        // Inicializar DataTables vacías al cargar la página
-        initializeDataTables();
-
         // Variable global para almacenar los datos cargados
         let currentTrackingData = null;
         let currentGradeLevel = null;
@@ -331,23 +274,26 @@ if (session_status() == PHP_SESSION_NONE) {
                             }
                         });
 
-                        // Poblar las tablas
+                        // Poblar la tabla única
                         populateTrackingTables(response.data, response.classes);
 
                         // Mostrar contenedor
                         $('#studentsContainer').show();
 
-                        // Verificar si hay datos
+                        // Habilitar botón de exportación si hay datos
                         let totalStudents = response.total_students || 0;
-                        if (totalStudents > 0) {
-                            $('#exportTrackingBtn').prop('disabled', false);
-                        }
+                        $('#exportTrackingBtn').prop('disabled', totalStudents === 0);
 
-                        // Inicializar DataTables
+                        // Inicializar DataTable y cerrar loading
                         setTimeout(() => {
-                            initializeDataTables();
-                            setTimeout(() => {
-                                Swal.close();
+                            try {
+                                initializeSingleDataTable(); // Intenta inicializar la tabla
+                            } catch (e) {
+                                console.error("Error inicializando DataTable:", e);
+                            } finally {
+                                Swal.close(); // Cierra el Swal SIEMPRE, incluso si hay un error
+                                
+                                // Muestra el mensaje de "sin resultados" después de cerrar el loading
                                 if (totalStudents === 0) {
                                     Swal.fire({
                                         icon: 'info',
@@ -355,29 +301,25 @@ if (session_status() == PHP_SESSION_NONE) {
                                         text: 'No se encontraron estudiantes para este grado'
                                     });
                                 }
-                            }, 200);
-                        }, 100);
+                            }
+                        }, 100); // Un pequeño delay para que el DOM se actualice
 
                     } else {
-                        Swal.close();
-                        setTimeout(() => {
-                            Swal.fire({
-                                icon: 'error',
-                                title: 'Error',
-                                text: 'Error al cargar estudiantes: ' + response.message
-                            });
-                        }, 100);
+                        Swal.close(); // Cerrar loading inmediatamente en error
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Error',
+                            text: 'Error al cargar estudiantes: ' + response.message
+                        });
                     }
                 },
                 error: function(xhr, status, error) {
-                    Swal.close();
-                    setTimeout(() => {
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Error de conexión',
-                            text: 'No se pudo conectar con el servidor'
-                        });
-                    }, 100);
+                    Swal.close(); // Cerrar loading inmediatamente en error
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error de conexión',
+                        text: 'No se pudo conectar con el servidor'
+                    });
                     console.error("Error AJAX:", status, error);
                 }
             });
@@ -447,170 +389,123 @@ if (session_status() == PHP_SESSION_NONE) {
     });
 
     // Función para inicializar DataTables
-    function initializeDataTables() {
-        const activeTabId = $('.nav-link.active').attr('id');
+    function initializeSingleDataTable() {
+        const table = $('#tracking-table');
+        
+        if ($.fn.DataTable.isDataTable(table)) {
+            table.DataTable().destroy();
+        }
 
-        $('.datatable').each(function() {
-            const tableId = $(this).attr('id');
-            const tabId = tableId.replace('-table', '-tab');
-
-            $(`#${tabId}`).tab('show');
-
-            if ($.fn.DataTable.isDataTable(this)) {
-                $(this).DataTable().destroy();
+        table.DataTable({
+            searching: true,
+            paging: false,
+            info: false,
+            ordering: true,
+            lengthChange: false,
+            dom: '<"top"f>rt<"bottom">',
+            scrollX: true,
+            scrollCollapse: true,
+            autoWidth: false,
+            language: {
+                search: "Buscar:",
+                zeroRecords: "No se encontraron registros coincidentes",
+                emptyTable: "No hay datos disponibles en la tabla",
+                infoEmpty: "Mostrando 0 a 0 de 0 registros"
             }
-
-            $(this).DataTable({
-                searching: true,
-                paging: false,
-                info: false,
-                ordering: true,
-                lengthChange: false,
-                dom: '<"top"f>rt<"bottom">',
-                scrollX: true,
-                scrollCollapse: true,
-                autoWidth: false,
-                columnDefs: [
-                    { width: "80px", targets: 0 },
-                    { width: "120px", targets: 1 },
-                    { width: "200px", targets: 2 },
-                    { width: "220px", targets: 3 },
-                    { width: "120px", targets: 4 },
-                    { width: "100px", targets: 5 },
-                    { width: "80px", targets: "_all" }
-                ],
-                language: {
-                    search: "Buscar:",
-                    zeroRecords: "No se encontraron registros coincidentes",
-                    emptyTable: "No hay datos disponibles en la tabla",
-                    infoEmpty: "Mostrando 0 a 0 de 0 registros"
-                }
-            });
         });
-
-        $(`#${activeTabId}`).tab('show');
     }
 
     // Poblar las tablas de seguimiento
-    function populateTrackingTables(data, classes) {
-        const courseTypes = ['matematicas', 'espanol', 'ingles', 'ciencias', 'tecnologia'];
+    function populateTrackingTables(students, classes) {
+        // Quitar tabs - usar una sola tabla
+        const table = $('#studentsContainer .table-responsive');
+        table.html(`
+            <table class="table table-striped table-hover datatable" id="tracking-table">
+                <thead>
+                    <tr>
+                        <th>Tipo ID</th>
+                        <th>Documento</th>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Teléfono</th>
+                        <th>Estado</th>
+                        ${classes.map((classInfo, index) => {
+                            const dateFormatted = new Date(classInfo.class_date + 'T00:00:00').toLocaleDateString('es-CO', {
+                                day: '2-digit', month: '2-digit'
+                            });
+                            return `<th title="${classInfo.class_date}">Clase ${index + 1}<br><small>${dateFormatted}</small></th>`;
+                        }).join('')}
+                        <th>Seguimiento</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        `);
 
-        let totalStudents = 0;
+        const tbody = table.find('tbody');
 
-        courseTypes.forEach(type => {
-            const students = data[type] || [];
-            const classData = classes[type] || [];
-            totalStudents += students.length;
+        if (students.length === 0) {
+            const colspan = 7 + classes.length;
+            tbody.append(`<tr><td colspan="${colspan}" class="text-center">No hay estudiantes registrados</td></tr>`);
+        } else {
+            students.forEach(student => {
+                const row = $('<tr></tr>');
 
-            const table = $(`#${type}-table`);
-            const thead = table.find('thead');
-            const tbody = table.find('tbody');
-            const countSpan = $(`#${type}-count`);
+                // Celdas base
+                row.append(`<td>${student.document_type || 'N/A'}</td>`);
+                row.append(`<td>${student.document_number || 'N/A'}</td>`);
+                row.append(`<td style="text-align: left;">${student.name || 'N/A'}</td>`);
+                row.append(`<td style="text-align: left;">${student.email || 'N/A'}</td>`);
+                row.append(`<td>${student.cell_phone || 'N/A'}</td>`);
+                row.append(`<td><span class="badge ${getStudentStatusBadge(student.status)}">${student.status || 'N/A'}</span></td>`);
 
-            // Limpiar tabla completamente
-            thead.empty();
-            tbody.empty();
+                // Celdas de asistencia por clase
+                classes.forEach((classInfo, index) => {
+                    const classNumber = index + 1;
+                    const classDate = classInfo.class_date;
 
-            // Crear encabezados base
-            const headerRow = $('<tr></tr>');
-            headerRow.append('<th>Tipo ID</th>');
-            headerRow.append('<th>Documento</th>');
-            headerRow.append('<th>Nombre</th>');
-            headerRow.append('<th>Correo</th>');
-            headerRow.append('<th>Teléfono</th>');
-            headerRow.append('<th>Estado</th>');
+                    const attendanceStatus = classInfo.attendance_by_student && classInfo.attendance_by_student[student.document_number]
+                        ? classInfo.attendance_by_student[student.document_number]
+                        : null;
 
-            // Agregar columnas dinámicas para cada clase
-            classData.forEach((classInfo, index) => {
-                const dateFormatted = new Date(classInfo.class_date + 'T00:00:00').toLocaleDateString('es-CO', {
-                    day: '2-digit', month: '2-digit'
-                });
-                headerRow.append(`<th title="${classInfo.class_date}">Clase ${index + 1}<br><small>${dateFormatted}</small></th>`);
-            });
+                    const buttonClass = getAttendanceButtonClass(attendanceStatus);
+                    const attendanceText = getAttendanceStatusText(attendanceStatus);
 
-            // Columna de información de asistencia
-            headerRow.append('<th>Seguimiento</th>');
-
-            thead.append(headerRow);
-
-            // Actualizar contador
-            countSpan.text(students.length);
-
-            // Llenar tabla
-            if (students.length === 0) {
-                const colspan = 7 + classData.length;
-                tbody.append(`<tr><td colspan="${colspan}" class="text-center">No hay estudiantes registrados</td></tr>`);
-            } else {
-                students.forEach(student => {
-                    const row = $('<tr></tr>');
-
-                    // Celdas base
-                    row.append(`<td>${student.document_type || 'N/A'}</td>`);
-                    row.append(`<td>${student.document_number || 'N/A'}</td>`);
-                    row.append(`<td style="text-align: left;">${student.name || 'N/A'}</td>`);
-                    row.append(`<td style="text-align: left;">${student.email || 'N/A'}</td>`);
-                    row.append(`<td>${student.cell_phone || 'N/A'}</td>`);
-                    row.append(`<td><span class="badge ${getStudentStatusBadge(student.status)}">${student.status || 'N/A'}</span></td>`);
-
-                    // Celdas de asistencia por clase
-                    classData.forEach((classInfo, index) => {
-                        const classNumber = index + 1;
-                        const classDate = classInfo.class_date;
-
-                        const attendanceStatus = classInfo.attendance_by_student && classInfo.attendance_by_student[student.document_number]
-                            ? classInfo.attendance_by_student[student.document_number]
-                            : null;
-
-                        const buttonClass = getAttendanceButtonClass(attendanceStatus);
-                        const attendanceText = getAttendanceStatusText(attendanceStatus);
-
-                        row.append(`<td>
-                            <button class="btn btn-sm ${buttonClass} observation-btn" 
-                                    data-bs-toggle="modal" 
-                                    data-bs-target="#genericObservationModal"
-                                    data-student-id="${student.document_number}"
-                                    data-student-name="${student.name}"
-                                    data-grade-level="${student.grade_level}"
-                                    data-course-type="${type}"
-                                    data-class-date="${classDate}"
-                                    data-class-number="${classNumber}"
-                                    data-attendance-status="${attendanceStatus || ''}"
-                                    data-attendance-text="${attendanceText}"
-                                    title="${attendanceText}">
-                                <i class="fas fa-eye"></i>
-                            </button>
-                        </td>`);
-                    });
-
-                    // Celda de seguimiento
                     row.append(`<td>
-                        <button class="btn btn-sm bg-teal-dark text-white attendance-info-btn" 
-                                data-bs-toggle="modal"
-                                data-bs-target="#genericAttendanceModal"
+                        <button class="btn btn-sm ${buttonClass} observation-btn" 
+                                data-bs-toggle="modal" 
+                                data-bs-target="#genericObservationModal"
                                 data-student-id="${student.document_number}"
                                 data-student-name="${student.name}"
                                 data-grade-level="${student.grade_level}"
-                                data-course-type="${type}">
-                            <i class="fas fa-info-circle"></i> Ver
+                                data-class-date="${classDate}"
+                                data-class-number="${classNumber}"
+                                data-attendance-status="${attendanceStatus || ''}"
+                                data-attendance-text="${attendanceText}"
+                                title="${attendanceText}">
+                            <i class="fas fa-eye"></i>
                         </button>
                     </td>`);
-
-                    tbody.append(row);
                 });
-            }
-        });
+
+                // Celda de seguimiento
+                row.append(`<td>
+                    <button class="btn btn-sm bg-teal-dark text-white attendance-info-btn" 
+                            data-bs-toggle="modal"
+                            data-bs-target="#genericAttendanceModal"
+                            data-student-id="${student.document_number}"
+                            data-student-name="${student.name}"
+                            data-grade-level="${student.grade_level}">
+                        <i class="fas fa-info-circle"></i> Ver
+                    </button>
+                </td>`);
+
+                tbody.append(row);
+            });
+        }
 
         // Crear modales genéricos
         createGenericModals();
-
-        // Inicializar Popovers
-        initializePopovers();
-
-        // Mostrar primer tab con datos
-        const firstTabWithData = courseTypes.find(type => (data[type] || []).length > 0);
-        if (firstTabWithData) {
-            $(`#${firstTabWithData}-tab`).tab('show');
-        }
     }
 
     function initializePopovers() {
@@ -706,7 +601,6 @@ if (session_status() == PHP_SESSION_NONE) {
                             </div>
                             <input type="hidden" name="student_id">
                             <input type="hidden" name="grade_level">
-                            <input type="hidden" name="course_type">
                             <input type="hidden" name="class_date">
                         </form>
                     </div>
@@ -935,7 +829,6 @@ if (session_status() == PHP_SESSION_NONE) {
             const studentId = $(this).data('student-id');
             const studentName = $(this).data('student-name');
             const gradeLevel = $(this).data('grade-level');
-            const courseType = $(this).data('course-type');
             const classDate = $(this).data('class-date');
             const classNumber = $(this).data('class-number');
             const attendanceStatus = $(this).data('attendance-status');
@@ -959,13 +852,12 @@ if (session_status() == PHP_SESSION_NONE) {
             form[0].reset();
             form.find('[name="student_id"]').val(studentId);
             form.find('[name="grade_level"]').val(gradeLevel);
-            form.find('[name="course_type"]').val(courseType);
             form.find('[name="class_date"]').val(classDate);
 
             $('#genericObservationModal').data('current-button', this);
 
             // Cargar observación existente
-            loadObservationGeneric(studentId, gradeLevel, courseType, classDate);
+            loadObservationGeneric(studentId, gradeLevel, classDate);
 
             $('#genericObservationModal').modal('show');
         });
@@ -980,8 +872,7 @@ if (session_status() == PHP_SESSION_NONE) {
             const studentId = $(this).data('student-id');
             const studentName = $(this).data('student-name');
             const gradeLevel = $(this).data('grade-level');
-            const courseType = $(this).data('course-type');
-            loadAttendanceInfoGeneric(studentId, gradeLevel, courseType, studentName);
+            loadAttendanceInfoGeneric(studentId, gradeLevel, studentName);
         });
 
         // Guardar observación
@@ -1052,7 +943,6 @@ if (session_status() == PHP_SESSION_NONE) {
                     student_id: studentInfo.id,
                     student_name: studentInfo.name,
                     grade_level: studentInfo.grade_level,
-                    course_type: studentInfo.course_type,
                     history_data: JSON.stringify(historyData)
                 },
                 xhrFields: { responseType: 'blob' },
@@ -1078,41 +968,40 @@ if (session_status() == PHP_SESSION_NONE) {
             });
         });
     }
-
+    
     // Cargar observación existente
-    function loadObservationGeneric(studentId, gradeLevel, courseType, classDate) {
+    function loadObservationGeneric(studentId, gradeLevel, classDate) {
         $.ajax({
             url: 'components/attendance/getObservation.php',
             method: 'POST',
             data: {
                 student_id: studentId,
                 grade_level: gradeLevel,
-                course_type: courseType,
                 class_date: classDate
             },
             dataType: 'json',
             success: function(response) {
                 if (response.success && response.data) {
                     const form = $('#genericObservationForm');
-                    form.find('[name="observation_type"]').val(response.data.observation_type);
-                    form.find('[name="observation_text"]').val(response.data.observation_text);
-
-                    if (response.data.created_by_name) {
-                        $('#observationCreatedBy').text(response.data.created_by_name);
+                    form.find('[name="observation_type"]').val(response.data.observation_type || '');
+                    form.find('[name="observation_text"]').val(response.data.observation_text || '');
+                    
+                    // Mostrar quién creó la observación si existe
+                    if (response.data.created_by_name || response.data.created_by) {
+                        const createdBy = response.data.created_by_name || response.data.created_by;
+                        $('#observationCreatedBy').text(createdBy);
                         $('#observationCreatedByContainer').show();
                     } else {
                         $('#observationCreatedByContainer').hide();
                     }
-                } else {
-                    $('#observationCreatedByContainer').hide();
                 }
             },
-            error: function() {
-                $('#observationCreatedByContainer').hide();
+            error: function(xhr, status, error) {
+                console.error("Error cargando observación:", error);
             }
         });
     }
-
+    
     // Guardar observación
     function saveObservationGeneric() {
         const form = $('#genericObservationForm');
@@ -1152,7 +1041,7 @@ if (session_status() == PHP_SESSION_NONE) {
     }
 
     // Cargar información de asistencia en modal genérico
-    function loadAttendanceInfoGeneric(studentId, gradeLevel, courseType, studentName) {
+    function loadAttendanceInfoGeneric(studentId, gradeLevel, studentName) {
         const modal = $('#genericAttendanceModal');
 
         modal.find('#attendanceModalTitle').html(`<i class="fas fa-user-clock me-2"></i> Asistencia: ${studentName}`);
@@ -1160,7 +1049,6 @@ if (session_status() == PHP_SESSION_NONE) {
         form[0].reset();
         form.find('[name="student_id"]').val(studentId);
         form.find('[name="grade_level"]').val(gradeLevel);
-        form.find('[name="course_type"]').val(courseType);
 
         modal.find('#attendanceLoading').show();
         modal.find('#attendanceContent').hide();
@@ -1171,13 +1059,13 @@ if (session_status() == PHP_SESSION_NONE) {
             $.ajax({
                 url: 'components/attendance/getAttendanceStats.php',
                 method: 'POST',
-                data: { student_id: studentId, grade_level: gradeLevel, course_type: courseType },
+                data: { student_id: studentId, grade_level: gradeLevel },
                 dataType: 'json'
             }),
             $.ajax({
                 url: 'components/attendance/getAttendanceManagement.php',
                 method: 'POST',
-                data: { student_id: studentId, grade_level: gradeLevel, course_type: courseType },
+                data: { student_id: studentId, grade_level: gradeLevel },
                 dataType: 'json'
             })
         ]).then(([statsResponse, managementResponse]) => {

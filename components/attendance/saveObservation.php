@@ -17,14 +17,25 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 
 $studentId = $_POST['student_id'] ?? '';
 $gradeLevel = $_POST['grade_level'] ?? '';
-$courseType = $_POST['course_type'] ?? '';
 $classDate = $_POST['class_date'] ?? '';
 $observationType = $_POST['observation_type'] ?? '';
 $observationText = $_POST['observation_text'] ?? '';
 $createdBy = $_SESSION['username'] ?? 'usuario_desconocido';
 
-if (empty($studentId) || empty($gradeLevel) || empty($courseType) || empty($classDate) || empty($observationType)) {
-    echo json_encode(['success' => false, 'message' => 'Parámetros obligatorios faltantes']);
+if (empty($studentId) || empty($gradeLevel) || empty($classDate) || empty($observationType)) {
+    // AÑADIR DEBUG TEMPORAL:
+    error_log("Debug saveObservation - studentId: $studentId, gradeLevel: $gradeLevel, classDate: $classDate, observationType: '$observationType'");
+    
+    echo json_encode([
+        'success' => false, 
+        'message' => 'Parámetros obligatorios faltantes',
+        'debug' => [
+            'studentId' => $studentId,
+            'gradeLevel' => $gradeLevel, 
+            'classDate' => $classDate,
+            'observationType' => $observationType
+        ]
+    ]);
     exit;
 }
 
@@ -33,8 +44,8 @@ try {
         throw new Exception("Error de conexión a la base de datos");
     }
     
-    $sql = "INSERT INTO class_observations (student_id, grade_level, course_type, class_date, observation_type, observation_text, created_by) 
-            VALUES (?, ?, ?, ?, ?, ?, ?) 
+    $sql = "INSERT INTO class_observations (student_id, grade_level, class_date, observation_type, observation_text, created_by) 
+            VALUES (?, ?, ?, ?, ?, ?) 
             ON DUPLICATE KEY UPDATE 
                 observation_type = VALUES(observation_type), 
                 observation_text = VALUES(observation_text),
@@ -46,7 +57,7 @@ try {
         throw new Exception('Error en la preparación de consulta: ' . $conn->error);
     }
     
-    $stmt->bind_param("sssssss", $studentId, $gradeLevel, $courseType, $classDate, $observationType, $observationText, $createdBy);
+    $stmt->bind_param("ssssss", $studentId, $gradeLevel, $classDate, $observationType, $observationText, $createdBy);
     
     if (!$stmt->execute()) {
         throw new Exception('Error al ejecutar consulta: ' . $stmt->error);
