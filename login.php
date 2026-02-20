@@ -183,7 +183,7 @@ while ($empresaLog = mysqli_fetch_array($queryCompany)) {
     <title>Beneficios Metrofem</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/login1.css?v=1.5">
+    <link rel="stylesheet" href="css/login1.css?v=2.0">
     <link rel="icon" href="img/gift_flow_icono.png" type="image/x-icon">
     <style>
         /* Estilos para el modo claro */
@@ -214,7 +214,7 @@ while ($empresaLog = mysqli_fetch_array($queryCompany)) {
         .eagle-link-footer {
             font-family: 'Sparose', sans-serif !important;
             font-size: 14px;
-            color: #fff !important;
+            color: #000000 !important;
             text-decoration: none !important;
             font-weight: normal;
         }
@@ -225,14 +225,14 @@ while ($empresaLog = mysqli_fetch_array($queryCompany)) {
     <div class="login-container">
         <div class="login-sidebar" style="position: relative;">
             <div class="login-logo">
-                <img src="./img/logos/logo_metrofem.png" alt="Logo Beneficios" class="img-fluid pb-2">
+                <img src="./img/logos/logo_escolink.png" alt="Logo Beneficios" class="img-fluid pb-2" style="width: 90%; max-width: 400px;">
             </div>
 
-            <p class="login-text text-white">Inicia sesión con tus credenciales para acceder al sistema</p>
+            <p class="login-text text-gray-50">Inicia sesión con tus credenciales para acceder al sistema</p>
 
             <br>
-            <small class="text-white-50 d-block text-center" style="position: absolute; bottom: 20px; left: 0; width: 100%;">
-                Made by <img src="img/eagle_blanco.svg" alt="Eagle Software" style="height: 24px; vertical-align: middle;"> <a href="https://www.agenciaeaglesoftware.com/" class="eagle-link-footer" target="_blank">Eagle Software</a> &copy; <?php echo date("Y"); ?>. <br>Todos los derechos reservados a <?php echo $empresa ?>.
+            <small class="text-black d-block text-center" style="position: absolute; bottom: 20px; left: 0; width: 100%;">
+                Made by <img src="img/eagle_blanco.svg" alt="Eagle Software" style="height: 24px; vertical-align: middle; filter: brightness(0);"> <a href="https://www.agenciaeaglesoftware.com/" class="eagle-link-footer" target="_blank">Eagle Software</a> &copy; <?php echo date("Y"); ?>. <br>Todos los derechos reservados a <?php echo $empresa ?>.
             </small>
         </div>
         <div class="login-form">
@@ -281,18 +281,18 @@ while ($empresaLog = mysqli_fetch_array($queryCompany)) {
                         .custom-checkbox {
                             width: 1.5em;
                             height: 1.5em;
-                            border: 2px solid #30336b;
+                            border: 2px solid var(--primary-color);
                             border-radius: 4px;
-                            accent-color: #30336b;
+                            accent-color: var(--primary-color);
                         }
                         .custom-checkbox:checked {
-                            background-color: #30336b;
-                            border-color: #30336b;
+                            background-color: var(--primary-color);
+                            border-color: var(--primary-color);
                         }
                     </style>
                 </div>
 
-                <button type="submit" class="btn btn-login" name="iniciar">
+                <button type="submit" class="btn btn-login text-black" name="iniciar">
                     Iniciar sesión
                 </button>
             </form>

@@ -35,7 +35,7 @@ $logo = $company['logo'] ?? 'gf_header.png'; // Fallback si no hay logo
         <button class="btn btn-tertiary mr-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptionsLabel">
             <i class="bi bi-list"></i>
         </button>
-        <a class="navbar-brand" href="#"><img src="img/logos/<?php echo htmlspecialchars($logo); ?>" alt="logo" width="120px"></a>
+        <a class="navbar-brand" href="#"><img src="img/logos/<?php echo htmlspecialchars($logo); ?>" alt="logo" width="180px"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
