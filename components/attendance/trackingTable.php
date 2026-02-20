@@ -16,13 +16,16 @@ if (session_status() == PHP_SESSION_NONE) {
 
     .datatable {
         width: 100%;
-        table-layout: auto; /* Permite que el navegador calcule el ancho de las columnas */
+        table-layout: auto;
+        /* Permite que el navegador calcule el ancho de las columnas */
     }
 
     .datatable th,
     .datatable td {
-        white-space: normal; /* Permite que el texto se ajuste a la siguiente línea */
-        word-wrap: break-word; /* Fuerza el corte de palabras largas si es necesario */
+        white-space: normal;
+        /* Permite que el texto se ajuste a la siguiente línea */
+        word-wrap: break-word;
+        /* Fuerza el corte de palabras largas si es necesario */
         padding: 8px 12px;
         vertical-align: middle;
         text-align: center;
@@ -167,6 +170,22 @@ if (session_status() == PHP_SESSION_NONE) {
                     </div>
 
                     <!-- Botones de exportación -->
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-12 d-flex align-items-center gap-2">
+                        <button id="exportTrackingBtn" class="btn bg-teal-dark text-white" disabled>
+                            <i class="bi bi-download me-2"></i>
+                            Exportar seguimiento
+                        </button>
+                        <button id="exportAttendanceBtn" class="btn bg-lime-dark text-white" disabled>
+                            <i class="bi bi-table me-2"></i>
+                            Exportar asistencia
+                        </button>
+                        <button id="exportGroupBtn" class="btn bg-indigo-dark text-white" disabled>
+                            <i class="bi bi-people me-2"></i>
+                            Exportar grupo
+                        </button>
+                    </div>
+
+                    <!-- Botones de exportación -->
                     <!-- <div class="col-lg-6 col-md-6 col-sm-12 col-12 d-flex align-items-end gap-2">
                         <button id="exportTrackingBtn" class="btn btn-success" disabled>
                             <i class="fas fa-file-excel me-2"></i>
@@ -234,7 +253,7 @@ if (session_status() == PHP_SESSION_NONE) {
         // Evento de cambio en el selector de grado
         $('#trackingGradeLevel').on('change', function() {
             const selectedGrade = $(this).val();
-            
+
             // Deshabilitar botón de exportación
             $('#exportTrackingBtn').prop('disabled', true);
             currentTrackingData = null;
@@ -254,14 +273,18 @@ if (session_status() == PHP_SESSION_NONE) {
                 allowOutsideClick: false,
                 allowEscapeKey: false,
                 showConfirmButton: false,
-                didOpen: () => { Swal.showLoading(); }
+                didOpen: () => {
+                    Swal.showLoading();
+                }
             });
 
             // Cargar datos para todas las materias
             $.ajax({
                 url: 'components/attendance/getTrackingData.php',
                 method: 'POST',
-                data: { grade_level: selectedGrade },
+                data: {
+                    grade_level: selectedGrade
+                },
                 dataType: 'json',
                 success: function(response) {
                     if (response.success) {
@@ -283,6 +306,8 @@ if (session_status() == PHP_SESSION_NONE) {
                         // Habilitar botón de exportación si hay datos
                         let totalStudents = response.total_students || 0;
                         $('#exportTrackingBtn').prop('disabled', totalStudents === 0);
+                        $('#exportAttendanceBtn').prop('disabled', totalStudents === 0);
+                        $('#exportGroupBtn').prop('disabled', totalStudents === 0);
 
                         // Inicializar DataTable y cerrar loading
                         setTimeout(() => {
@@ -292,7 +317,7 @@ if (session_status() == PHP_SESSION_NONE) {
                                 console.error("Error inicializando DataTable:", e);
                             } finally {
                                 Swal.close(); // Cierra el Swal SIEMPRE, incluso si hay un error
-                                
+
                                 // Muestra el mensaje de "sin resultados" después de cerrar el loading
                                 if (totalStudents === 0) {
                                     Swal.fire({
@@ -342,7 +367,9 @@ if (session_status() == PHP_SESSION_NONE) {
                 allowOutsideClick: false,
                 allowEscapeKey: false,
                 showConfirmButton: false,
-                didOpen: () => { Swal.showLoading(); }
+                didOpen: () => {
+                    Swal.showLoading();
+                }
             });
 
             $.ajax({
@@ -353,7 +380,9 @@ if (session_status() == PHP_SESSION_NONE) {
                     data: JSON.stringify(currentTrackingData.data),
                     classes: JSON.stringify(currentTrackingData.classes)
                 },
-                xhrFields: { responseType: 'blob' },
+                xhrFields: {
+                    responseType: 'blob'
+                },
                 success: function(data) {
                     const blob = new Blob([data], {
                         type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
@@ -386,12 +415,145 @@ if (session_status() == PHP_SESSION_NONE) {
                 }
             });
         });
-    });
+
+        // Exportar asistencia simple
+        $('#exportAttendanceBtn').on('click', function() {
+            if (!currentTrackingData || !currentGradeLevel) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'No hay datos para exportar'
+                });
+                return;
+            }
+
+            Swal.fire({
+                title: 'Generando archivo Excel',
+                text: 'Por favor espere...',
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                showConfirmButton: false,
+                didOpen: () => {
+                    Swal.showLoading();
+                }
+            });
+
+            $.ajax({
+                url: 'components/attendance/exportAttendanceSimpleTracking.php',
+                method: 'POST',
+                data: {
+                    grade_level: currentGradeLevel,
+                    data: JSON.stringify(currentTrackingData.data),
+                    classes: JSON.stringify(currentTrackingData.classes)
+                },
+                xhrFields: {
+                    responseType: 'blob'
+                },
+                success: function(data) {
+                    const blob = new Blob([data], {
+                        type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+                    });
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = `Asistencia_${currentGradeLevel}_${new Date().toISOString().split('T')[0]}.xlsx`;
+                    document.body.appendChild(a);
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                    document.body.removeChild(a);
+
+                    Swal.close();
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Exportación exitosa',
+                        text: 'El archivo de asistencia se ha descargado correctamente',
+                        timer: 2000,
+                        showConfirmButton: false
+                    });
+                },
+                error: function() {
+                    Swal.close();
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error de exportación',
+                        text: 'No se pudo generar el archivo Excel de asistencia'
+                    });
+                }
+            });
+        });
+
+
+        // Exportar grupo
+        $('#exportGroupBtn').on('click', function() {
+            if (!currentGradeLevel) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Debe seleccionar un grado'
+                });
+                return;
+            }
+
+            Swal.fire({
+                title: 'Generando archivo Excel',
+                text: 'Por favor espere...',
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                showConfirmButton: false,
+                didOpen: () => {
+                    Swal.showLoading();
+                }
+            });
+
+            $.ajax({
+                url: 'components/attendance/exportGroupData.php',
+                method: 'POST',
+                data: {
+                    grade_level: currentGradeLevel
+                },
+                xhrFields: {
+                    responseType: 'blob'
+                },
+                success: function(data) {
+                    const blob = new Blob([data], {
+                        type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+                    });
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = `Listado_${currentGradeLevel.replace(/[° ]/g, '_')}_${new Date().toISOString().split('T')[0]}.xlsx`;
+                    document.body.appendChild(a);
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                    document.body.removeChild(a);
+
+                    Swal.close();
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Exportación exitosa',
+                        text: 'El listado del grupo se ha descargado correctamente',
+                        timer: 2000,
+                        showConfirmButton: false
+                    });
+                },
+                error: function() {
+                    Swal.close();
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error de exportación',
+                        text: 'No se pudo generar el archivo Excel del listado'
+                    });
+                }
+            });
+        });
+
+        // ...existing code...
+    }); // <-- Este es el cierre de $(document).ready()
 
     // Función para inicializar DataTables
     function initializeSingleDataTable() {
         const table = $('#tracking-table');
-        
+
         if ($.fn.DataTable.isDataTable(table)) {
             table.DataTable().destroy();
         }
@@ -433,7 +595,11 @@ if (session_status() == PHP_SESSION_NONE) {
                             const dateFormatted = new Date(classInfo.class_date + 'T00:00:00').toLocaleDateString('es-CO', {
                                 day: '2-digit', month: '2-digit'
                             });
-                            return `<th title="${classInfo.class_date}">Clase ${index + 1}<br><small>${dateFormatted}</small></th>`;
+                            return ` < th title = "${classInfo.class_date}" > Clase $ {
+            index + 1
+        } < br > < small > $ {
+            dateFormatted
+        } < /small></th > `;
                         }).join('')}
                         <th>Seguimiento</th>
                     </tr>
@@ -464,9 +630,9 @@ if (session_status() == PHP_SESSION_NONE) {
                     const classNumber = index + 1;
                     const classDate = classInfo.class_date;
 
-                    const attendanceStatus = classInfo.attendance_by_student && classInfo.attendance_by_student[student.document_number]
-                        ? classInfo.attendance_by_student[student.document_number]
-                        : null;
+                    const attendanceStatus = classInfo.attendance_by_student && classInfo.attendance_by_student[student.document_number] ?
+                        classInfo.attendance_by_student[student.document_number] :
+                        null;
 
                     const buttonClass = getAttendanceButtonClass(attendanceStatus);
                     const attendanceText = getAttendanceStatusText(attendanceStatus);
@@ -516,37 +682,53 @@ if (session_status() == PHP_SESSION_NONE) {
 
     function getAttendanceButtonClass(attendanceStatus) {
         switch (attendanceStatus) {
-            case 'presente': return 'bg-teal-dark text-white';
-            case 'tarde': return 'bg-orange-dark text-white';
-            case 'ausente': return 'bg-danger text-white';
-            default: return 'bg-secondary text-white';
+            case 'presente':
+                return 'bg-teal-dark text-white';
+            case 'tarde':
+                return 'bg-orange-dark text-white';
+            case 'ausente':
+                return 'bg-danger text-white';
+            default:
+                return 'bg-secondary text-white';
         }
     }
 
     function getAttendanceStatusText(attendanceStatus) {
         switch (attendanceStatus) {
-            case 'presente': return 'Presente';
-            case 'tarde': return 'Llegada tardía';
-            case 'ausente': return 'Ausente';
-            default: return 'Sin registro';
+            case 'presente':
+                return 'Presente';
+            case 'tarde':
+                return 'Llegada tardía';
+            case 'ausente':
+                return 'Ausente';
+            default:
+                return 'Sin registro';
         }
     }
 
     function getAttendanceStatusColor(attendanceStatus) {
         switch (attendanceStatus) {
-            case 'presente': return 'bg-success';
-            case 'tarde': return 'bg-warning text-dark';
-            case 'ausente': return 'bg-danger';
-            default: return 'bg-secondary';
+            case 'presente':
+                return 'bg-success';
+            case 'tarde':
+                return 'bg-warning text-dark';
+            case 'ausente':
+                return 'bg-danger';
+            default:
+                return 'bg-secondary';
         }
     }
 
     function getStudentStatusBadge(status) {
         switch (status) {
-            case 'Activo': return 'bg-success';
-            case 'Inactivo': return 'bg-danger';
-            case 'Retirado': return 'bg-dark';
-            default: return 'bg-secondary';
+            case 'Activo':
+                return 'bg-success';
+            case 'Inactivo':
+                return 'bg-danger';
+            case 'Retirado':
+                return 'bg-dark';
+            default:
+                return 'bg-secondary';
         }
     }
 
@@ -923,7 +1105,11 @@ if (session_status() == PHP_SESSION_NONE) {
             const studentInfo = $('#historyModal').data('student-info');
 
             if (!historyData || !studentInfo) {
-                Swal.fire({ icon: 'error', title: 'Error', text: 'No hay datos para exportar' });
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'No hay datos para exportar'
+                });
                 return;
             }
 
@@ -933,7 +1119,9 @@ if (session_status() == PHP_SESSION_NONE) {
                 allowOutsideClick: false,
                 allowEscapeKey: false,
                 showConfirmButton: false,
-                didOpen: () => { Swal.showLoading(); }
+                didOpen: () => {
+                    Swal.showLoading();
+                }
             });
 
             $.ajax({
@@ -945,7 +1133,9 @@ if (session_status() == PHP_SESSION_NONE) {
                     grade_level: studentInfo.grade_level,
                     history_data: JSON.stringify(historyData)
                 },
-                xhrFields: { responseType: 'blob' },
+                xhrFields: {
+                    responseType: 'blob'
+                },
                 success: function(data) {
                     const blob = new Blob([data], {
                         type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
@@ -959,16 +1149,26 @@ if (session_status() == PHP_SESSION_NONE) {
                     window.URL.revokeObjectURL(url);
                     document.body.removeChild(a);
                     Swal.close();
-                    Swal.fire({ icon: 'success', title: 'Exportación exitosa', text: 'El archivo se ha descargado correctamente', timer: 2000, showConfirmButton: false });
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Exportación exitosa',
+                        text: 'El archivo se ha descargado correctamente',
+                        timer: 2000,
+                        showConfirmButton: false
+                    });
                 },
                 error: function() {
                     Swal.close();
-                    Swal.fire({ icon: 'error', title: 'Error de exportación', text: 'No se pudo generar el archivo Excel' });
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error de exportación',
+                        text: 'No se pudo generar el archivo Excel'
+                    });
                 }
             });
         });
     }
-    
+
     // Cargar observación existente
     function loadObservationGeneric(studentId, gradeLevel, classDate) {
         $.ajax({
@@ -985,7 +1185,7 @@ if (session_status() == PHP_SESSION_NONE) {
                     const form = $('#genericObservationForm');
                     form.find('[name="observation_type"]').val(response.data.observation_type || '');
                     form.find('[name="observation_text"]').val(response.data.observation_text || '');
-                    
+
                     // Mostrar quién creó la observación si existe
                     if (response.data.created_by_name || response.data.created_by) {
                         const createdBy = response.data.created_by_name || response.data.created_by;
@@ -1001,7 +1201,7 @@ if (session_status() == PHP_SESSION_NONE) {
             }
         });
     }
-    
+
     // Guardar observación
     function saveObservationGeneric() {
         const form = $('#genericObservationForm');
@@ -1020,19 +1220,33 @@ if (session_status() == PHP_SESSION_NONE) {
             timeout: 10000,
             success: function(response) {
                 if (response.success) {
-                    Swal.fire({ icon: 'success', title: 'Éxito', text: 'Observación guardada correctamente', timer: 2000, showConfirmButton: false });
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Éxito',
+                        text: 'Observación guardada correctamente',
+                        timer: 2000,
+                        showConfirmButton: false
+                    });
                     if (currentButton) {
                         $(currentButton).removeClass('btn-outline-primary').addClass('bg-cyan-dark');
                     }
                     $('#genericObservationModal').modal('hide');
                 } else {
-                    Swal.fire({ icon: 'error', title: 'Error', text: 'Error al guardar la observación: ' + response.message });
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: 'Error al guardar la observación: ' + response.message
+                    });
                 }
             },
             error: function(xhr, status) {
                 let errorMessage = 'No se pudo conectar con el servidor';
                 if (status === 'timeout') errorMessage = 'La operación tardó demasiado tiempo';
-                Swal.fire({ icon: 'error', title: 'Error de conexión', text: errorMessage });
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error de conexión',
+                    text: errorMessage
+                });
             },
             complete: function() {
                 saveButton.prop('disabled', false).html(originalText);
@@ -1059,13 +1273,19 @@ if (session_status() == PHP_SESSION_NONE) {
             $.ajax({
                 url: 'components/attendance/getAttendanceStats.php',
                 method: 'POST',
-                data: { student_id: studentId, grade_level: gradeLevel },
+                data: {
+                    student_id: studentId,
+                    grade_level: gradeLevel
+                },
                 dataType: 'json'
             }),
             $.ajax({
                 url: 'components/attendance/getAttendanceManagement.php',
                 method: 'POST',
-                data: { student_id: studentId, grade_level: gradeLevel },
+                data: {
+                    student_id: studentId,
+                    grade_level: gradeLevel
+                },
                 dataType: 'json'
             })
         ]).then(([statsResponse, managementResponse]) => {
@@ -1123,16 +1343,32 @@ if (session_status() == PHP_SESSION_NONE) {
             timeout: 15000,
             success: function(response) {
                 if (response.success) {
-                    Swal.fire({ icon: 'success', title: 'Guardado exitoso', text: 'La información de gestión ha sido guardada correctamente', timer: 2000, showConfirmButton: false });
-                    setTimeout(() => { $('#genericAttendanceModal').modal('hide'); }, 2000);
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Guardado exitoso',
+                        text: 'La información de gestión ha sido guardada correctamente',
+                        timer: 2000,
+                        showConfirmButton: false
+                    });
+                    setTimeout(() => {
+                        $('#genericAttendanceModal').modal('hide');
+                    }, 2000);
                 } else {
-                    Swal.fire({ icon: 'error', title: 'Error', text: 'Error al guardar: ' + (response.message || 'Error desconocido') });
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: 'Error al guardar: ' + (response.message || 'Error desconocido')
+                    });
                 }
             },
             error: function(xhr, status) {
                 let errorMessage = 'No se pudo conectar con el servidor';
                 if (status === 'timeout') errorMessage = 'La operación tardó demasiado tiempo';
-                Swal.fire({ icon: 'error', title: 'Error de conexión', text: errorMessage });
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error de conexión',
+                    text: errorMessage
+                });
             },
             complete: function() {
                 saveButton.prop('disabled', false).html(originalText);
@@ -1165,16 +1401,16 @@ if (session_status() == PHP_SESSION_NONE) {
                             row.append(`<td>${item.responsible_name || item.responsible_username || 'N/A'}</td>`);
                             row.append(`<td>${item.requires_intervention || 'N/A'}</td>`);
 
-                            const interventionObs = item.intervention_observation
-                                ? `<span class="text-truncate d-inline-block" style="max-width: 200px;" title="${item.intervention_observation}">${item.intervention_observation}</span>`
-                                : 'N/A';
+                            const interventionObs = item.intervention_observation ?
+                                `<span class="text-truncate d-inline-block" style="max-width: 200px;" title="${item.intervention_observation}">${item.intervention_observation}</span>` :
+                                'N/A';
                             row.append(`<td>${interventionObs}</td>`);
                             row.append(`<td>${item.is_resolved || 'N/A'}</td>`);
                             row.append(`<td>${item.requires_additional_strategy || 'N/A'}</td>`);
 
-                            const strategyObs = item.strategy_observation
-                                ? `<span class="text-truncate d-inline-block" style="max-width: 200px;" title="${item.strategy_observation}">${item.strategy_observation}</span>`
-                                : 'N/A';
+                            const strategyObs = item.strategy_observation ?
+                                `<span class="text-truncate d-inline-block" style="max-width: 200px;" title="${item.strategy_observation}">${item.strategy_observation}</span>` :
+                                'N/A';
                             row.append(`<td>${strategyObs}</td>`);
                             row.append(`<td>${item.strategy_fulfilled || 'N/A'}</td>`);
                             row.append(`<td>${item.withdrawal_reason || 'N/A'}</td>`);
