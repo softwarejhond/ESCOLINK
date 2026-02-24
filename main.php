@@ -71,7 +71,7 @@ if (isset($_SESSION['campos_incompletos']) && $_SESSION['campos_incompletos'] ==
     <link rel="stylesheet" href="css/contadores.css?v=0.7">
     <link rel="stylesheet" href="css/dataTables.css?v=0.3">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <title>Dashboard</title>
+    <title>ESCOLINK - Inicio</title>
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.0/dist/sweetalert2.min.css" rel="stylesheet">
     <link rel="icon" href="img/icono-escolink.png" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

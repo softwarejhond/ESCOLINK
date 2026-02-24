@@ -51,6 +51,9 @@ $logo = $company['logo'] ?? 'gf_header.png'; // Fallback si no hay logo
             <button id="btnSubirBase" class="btn bg-magenta-dark me-2 text-white" type="button">
                 <i class="bi bi-cloud-upload me-1"></i>Subir
             </button>
+            <button id="btnDescargarPlantilla" class="btn bg-teal-dark text-white" type="button">
+                <i class="bi bi-file-earmark-excel"></i>
+            </button>
             <script>
                 document.getElementById('btnDescargarPlantilla').addEventListener('click', function() {
                     window.location.href = 'uploads/plantilla_base.xlsx';

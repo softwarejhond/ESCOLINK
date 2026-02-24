@@ -37,8 +37,8 @@ $rol = $infoUsuario['rol'];
     <link rel="stylesheet" href="css/dataTables.css?v=0.3">
     <link rel="stylesheet" href="css/cardsMoodleMatricula.css?v=0.0.3">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <title>Dashboard</title>
-    <link rel="icon" href="img/utt.png" type="image/x-icon">
+    <title>ESCOLINK</title>
+    <link rel="icon" href="img/icono-escolink.png" type="image/x-icon">
     <style>
 
     </style>

@@ -36,8 +36,8 @@ $rol = $infoUsuario['rol'];
     <link rel="stylesheet" href="css/contadores.css?v=0.7">
     <link rel="stylesheet" href="css/dataTables.css?v=0.3">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <title>Dashboard</title>
-    <link rel="icon" href="img/gift_flow_icono.png" type="image/x-icon">
+    <title>ESCOLINK - Listado de Usuarios</title>
+    <link rel="icon" href="img/icono-escolink.png" type="image/x-icon">
 </head>
 
 <body style="background-color:white">
