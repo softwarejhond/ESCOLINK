@@ -595,11 +595,7 @@ if (session_status() == PHP_SESSION_NONE) {
                             const dateFormatted = new Date(classInfo.class_date + 'T00:00:00').toLocaleDateString('es-CO', {
                                 day: '2-digit', month: '2-digit'
                             });
-                            return ` < th title = "${classInfo.class_date}" > Clase $ {
-            index + 1
-        } < br > < small > $ {
-            dateFormatted
-        } < /small></th > `;
+                            return `<th title="${classInfo.class_date}">Clase ${index + 1}<br><small>${dateFormatted}</small></th>`;
                         }).join('')}
                         <th>Seguimiento</th>
                     </tr>

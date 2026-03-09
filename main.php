@@ -101,7 +101,7 @@ if (isset($_SESSION['campos_incompletos']) && $_SESSION['campos_incompletos'] ==
                 </div>
             </div>
             <hr>
-            <?php //include("components/cardContadores/contadoresCards.php"); 
+            <?php include("components/cardContadores/contadoresCards.php"); 
             ?>
 
             <?php //include("components/aceptUsers/updateStatus.php");  

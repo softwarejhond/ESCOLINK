@@ -51,12 +51,66 @@ $logo = $company['logo'] ?? 'gf_header.png'; // Fallback si no hay logo
             <button id="btnSubirBase" class="btn bg-magenta-dark me-2 text-white" type="button">
                 <i class="bi bi-cloud-upload me-1"></i>Subir
             </button>
-            <button id="btnDescargarPlantilla" class="btn bg-teal-dark text-white" type="button">
+            <button id="btnDescargarPlantilla" class="btn bg-teal-dark text-white me-2" type="button">
                 <i class="bi bi-file-earmark-excel"></i>
+            </button>
+            <!-- NUEVO BOTÓN -->
+            <button id="btnInformeGeneral" class="btn bg-indigo-dark text-white" type="button">
+                <i class="bi bi-file-earmark-text me-1"></i>Informe General
             </button>
             <script>
                 document.getElementById('btnDescargarPlantilla').addEventListener('click', function() {
-                    window.location.href = 'uploads/plantilla_base.xlsx';
+                    window.location.href = 'uploads/plantilla_base_estudiantes.xlsx';
+                });
+                
+                // NUEVO EVENT LISTENER
+                document.getElementById('btnInformeGeneral').addEventListener('click', function() {
+                    Swal.fire({
+                        title: 'Generando Informe General',
+                        text: 'Recopilando información de todos los estudiantes...',
+                        allowOutsideClick: false,
+                        allowEscapeKey: false,
+                        showConfirmButton: false,
+                        didOpen: () => {
+                            Swal.showLoading();
+                        }
+                    });
+                    
+                    fetch('components/attendance/exportAllStudents.php', {
+                        method: 'POST'
+                    })
+                    .then(response => {
+                        if (!response.ok) throw new Error('Error en la respuesta del servidor');
+                        return response.blob();
+                    })
+                    .then(blob => {
+                        const url = window.URL.createObjectURL(blob);
+                        const a = document.createElement('a');
+                        a.href = url;
+                        a.download = `Informe_General_Estudiantes_${new Date().toISOString().split('T')[0]}.xlsx`;
+                        document.body.appendChild(a);
+                        a.click();
+                        window.URL.revokeObjectURL(url);
+                        document.body.removeChild(a);
+                        
+                        Swal.close();
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Informe generado',
+                            text: 'El archivo se ha descargado exitosamente',
+                            showConfirmButton: false,
+                            timer: 2000
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        Swal.close();
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Error',
+                            text: 'No se pudo generar el informe'
+                        });
+                    });
                 });
             </script>
         <?php endif; ?>

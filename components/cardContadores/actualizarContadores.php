@@ -1,12 +1,8 @@
 <?php
 header('Content-Type: application/json');
 
-// Incluir conexión a BD
 include '../../controller/conexion.php';
 
-/**
- * Función para escribir logs de error personalizados
- */
 function writeErrorLog($message, $context = []) {
     $logFile = __DIR__ . '/contadores_error.log';
     $timestamp = date('Y-m-d H:i:s');
@@ -18,9 +14,6 @@ function writeErrorLog($message, $context = []) {
     }
 }
 
-/**
- * Función para responder con error sin exponer detalles
- */
 function respondWithError($userMessage, $technicalError = null, $context = []) {
     if ($technicalError) {
         writeErrorLog($technicalError, $context);
@@ -28,141 +21,188 @@ function respondWithError($userMessage, $technicalError = null, $context = []) {
     echo json_encode([
         'success' => false, 
         'message' => $userMessage,
-        'totalEntregas' => 0,
-        'totalUsuarios' => 0,
-        'entregasMes' => 0,
-        'labels' => [],
-        'values' => [],
+        'totalEstudiantes' => 0,
+        'estudiantesActivos' => 0,
+        'registrosMes' => 0,
+        'totalSedes' => 0,
+        'labelsSedes' => [],
+        'valuesSedes' => [],
+        'labelsGrados' => [],
+        'valuesGrados' => [],
+        'labelsGenero' => [],
+        'valuesGenero' => [],
         'labelsMeses' => [],
-        'valoresMeses' => []
+        'valoresMeses' => [],
+        'labelsComunas' => [],
+        'valuesComunas' => []
     ]);
     exit;
 }
 
 try {
-    // Verificar conexión
     if (!$conn) {
         respondWithError('Error de conexión', 'Database connection not available');
     }
 
-    // INICIALIZAR VARIABLES CON VALORES POR DEFECTO
-    $totalEntregas = 0;
-    $totalUsuarios = 0;
-    $entregasMes = 0;
+    $totalEstudiantes = 0;
+    $estudiantesActivos = 0;
+    $registrosMes = 0;
+    $totalSedes = 0;
 
-    // Contador 1: Total de Regalos Entregados
-    $stmt1 = $conn->prepare("SELECT COUNT(*) as total FROM gf_gift_deliveries");
-    if (!$stmt1) {
-        respondWithError('Error interno del servidor', 'Failed to prepare query 1: ' . $conn->error);
+    // Contador 1: Total de Estudiantes
+    $stmt = $conn->prepare("SELECT COUNT(*) FROM el_students");
+    if ($stmt && $stmt->execute()) {
+        $stmt->bind_result($totalEstudiantes);
+        $stmt->fetch();
+        $stmt->close();
     }
-    
-    if ($stmt1->execute()) {
-        $stmt1->bind_result($totalEntregas);
-        if (!$stmt1->fetch()) {
-            $totalEntregas = 0;
+
+    // Contador 2: Estudiantes Activos
+    $stmt = $conn->prepare("SELECT COUNT(*) FROM el_students WHERE status = 'ACTIVO'");
+    if ($stmt && $stmt->execute()) {
+        $stmt->bind_result($estudiantesActivos);
+        $stmt->fetch();
+        $stmt->close();
+    }
+
+    // Contador 3: Registros Este Mes
+    $stmt = $conn->prepare("SELECT COUNT(*) FROM el_students WHERE MONTH(created_at) = MONTH(CURDATE()) AND YEAR(created_at) = YEAR(CURDATE())");
+    if ($stmt && $stmt->execute()) {
+        $stmt->bind_result($registrosMes);
+        $stmt->fetch();
+        $stmt->close();
+    }
+
+    // Contador 4: Total de Sedes
+    $stmt = $conn->prepare("SELECT COUNT(DISTINCT sede) FROM el_students WHERE sede IS NOT NULL AND sede != ''");
+    if ($stmt && $stmt->execute()) {
+        $stmt->bind_result($totalSedes);
+        $stmt->fetch();
+        $stmt->close();
+    }
+
+    // Gráfico 1: Estudiantes por Sede (Barras)
+    $labelsSedes = [];
+    $valuesSedes = [];
+    $stmt = $conn->prepare("SELECT IFNULL(sede, 'Sin sede') as sede_nombre, COUNT(*) as total FROM el_students GROUP BY sede ORDER BY total DESC LIMIT 10");
+    if ($stmt && $stmt->execute()) {
+        $stmt->bind_result($sede, $total);
+        while ($stmt->fetch()) {
+            $labelsSedes[] = $sede;
+            $valuesSedes[] = (int)$total;
         }
-    } else {
-        writeErrorLog('Failed to execute query 1: ' . $stmt1->error);
+        $stmt->close();
     }
-    $stmt1->close();
 
-    // Contador 2: Total de Usuarios Registrados
-    $stmt2 = $conn->prepare("SELECT COUNT(*) as total FROM gf_users");
-    if (!$stmt2) {
-        respondWithError('Error interno del servidor', 'Failed to prepare query 2: ' . $conn->error);
-    }
-    
-    if ($stmt2->execute()) {
-        $stmt2->bind_result($totalUsuarios);
-        if (!$stmt2->fetch()) {
-            $totalUsuarios = 0;
+    // Gráfico 2: Estudiantes por Grado (Barras horizontales)
+    $labelsGrados = [];
+    $valuesGrados = [];
+    $stmt = $conn->prepare("SELECT grade_level, COUNT(*) as total FROM el_students GROUP BY grade_level ORDER BY grade_level ASC");
+    if ($stmt && $stmt->execute()) {
+        $stmt->bind_result($grado, $total);
+        while ($stmt->fetch()) {
+            $labelsGrados[] = $grado;
+            $valuesGrados[] = (int)$total;
         }
-    } else {
-        writeErrorLog('Failed to execute query 2: ' . $stmt2->error);
+        $stmt->close();
     }
-    $stmt2->close();
 
-    // Contador 3: Entregas Este Mes
-    $stmt3 = $conn->prepare("SELECT COUNT(*) as total FROM gf_gift_deliveries WHERE MONTH(reception_date) = MONTH(CURDATE()) AND YEAR(reception_date) = YEAR(CURDATE())");
-    if (!$stmt3) {
-        respondWithError('Error interno del servidor', 'Failed to prepare query 3: ' . $conn->error);
-    }
-    
-    if ($stmt3->execute()) {
-        $stmt3->bind_result($entregasMes);
-        if (!$stmt3->fetch()) {
-            $entregasMes = 0;
+    // Gráfico 3: Distribución por Género (Dona)
+    $labelsGenero = [];
+    $valuesGenero = [];
+    $stmt = $conn->prepare("SELECT 
+        CASE gender 
+            WHEN 'M' THEN 'Masculino' 
+            WHEN 'F' THEN 'Femenino' 
+            WHEN 'OTRO' THEN 'Otro' 
+        END as genero, 
+        COUNT(*) as total 
+        FROM el_students GROUP BY gender ORDER BY total DESC");
+    if ($stmt && $stmt->execute()) {
+        $stmt->bind_result($genero, $total);
+        while ($stmt->fetch()) {
+            $labelsGenero[] = $genero;
+            $valuesGenero[] = (int)$total;
         }
-    } else {
-        writeErrorLog('Failed to execute query 3: ' . $stmt3->error);
-    }
-    $stmt3->close();
-
-    // Consulta 4: Entregas por sede para el gráfico
-    $labels = [];
-    $values = [];
-    
-    $stmt4 = $conn->prepare("SELECT sede, COUNT(*) as total FROM gf_gift_deliveries GROUP BY sede ORDER BY total DESC");
-    if ($stmt4 && $stmt4->execute()) {
-        $stmt4->bind_result($sede, $total_sede);
-        while ($stmt4->fetch()) {
-            $labels[] = $sede ?? 'Sin sede';
-            $values[] = (int)($total_sede ?? 0);
-        }
-        $stmt4->close();
-    } else {
-        writeErrorLog('Failed with query 4: ' . ($stmt4 ? $stmt4->error : $conn->error));
-        if ($stmt4) $stmt4->close();
+        $stmt->close();
     }
 
-    // Consulta 5: Entregas por mes (últimos 12 meses)
+    // Gráfico 4: Registros por Mes (Línea - últimos 12 meses)
     $labelsMeses = [];
     $valoresMeses = [];
-    
-    $stmt5 = $conn->prepare("SELECT DATE_FORMAT(reception_date, '%Y-%m') as mes, COUNT(*) as total 
-                            FROM gf_gift_deliveries 
-                            WHERE reception_date >= DATE_SUB(CURDATE(), INTERVAL 12 MONTH)
+    $stmt = $conn->prepare("SELECT DATE_FORMAT(created_at, '%Y-%m') as mes, COUNT(*) as total 
+                            FROM el_students 
+                            WHERE created_at >= DATE_SUB(CURDATE(), INTERVAL 12 MONTH)
                             GROUP BY mes
-                            ORDER BY mes");
-    if ($stmt5 && $stmt5->execute()) {
-        $stmt5->bind_result($mes, $total_mes);
-        while ($stmt5->fetch()) {
-            $labelsMeses[] = $mes ?? '';
-            $valoresMeses[] = (int)($total_mes ?? 0);
+                            ORDER BY mes ASC");
+    if ($stmt && $stmt->execute()) {
+        $stmt->bind_result($mes, $total);
+        while ($stmt->fetch()) {
+            $labelsMeses[] = $mes;
+            $valoresMeses[] = (int)$total;
         }
-        $stmt5->close();
-    } else {
-        writeErrorLog('Failed with query 5: ' . ($stmt5 ? $stmt5->error : $conn->error));
-        if ($stmt5) $stmt5->close();
+        $stmt->close();
     }
 
-    // ASEGURAR QUE TODOS LOS VALORES SEAN NÚMEROS ENTEROS
-    $totalEntregas = (int)($totalEntregas ?? 0);
-    $totalUsuarios = (int)($totalUsuarios ?? 0);
-    $entregasMes = (int)($entregasMes ?? 0);
+    // Gráfico 5: Top 10 Comunas (Barras)
+    $labelsComunas = [];
+    $valuesComunas = [];
+    $stmt = $conn->prepare("SELECT IFNULL(comuna, 'Sin comuna') as comuna_nombre, COUNT(*) as total 
+                            FROM el_students 
+                            GROUP BY comuna 
+                            ORDER BY total DESC 
+                            LIMIT 10");
+    if ($stmt && $stmt->execute()) {
+        $stmt->bind_result($comuna, $total);
+        while ($stmt->fetch()) {
+            $labelsComunas[] = $comuna;
+            $valuesComunas[] = (int)$total;
+        }
+        $stmt->close();
+    }
 
-    // Log successful operation
-    writeErrorLog('Counters updated successfully', [
-        'totalEntregas' => $totalEntregas,
-        'totalUsuarios' => $totalUsuarios,
-        'entregasMes' => $entregasMes
-    ]);
+    // Gráfico 6: Estudiantes por Estado (Dona)
+    $labelsEstatus = [];
+    $valuesEstatus = [];
+    $stmt = $conn->prepare("SELECT IFNULL(status, 'Sin estado') as estado, COUNT(*) as total FROM el_students GROUP BY status ORDER BY total DESC");
+    if ($stmt && $stmt->execute()) {
+        $stmt->bind_result($estado, $total);
+        while ($stmt->fetch()) {
+            $labelsEstatus[] = $estado;
+            $valuesEstatus[] = (int)$total;
+        }
+        $stmt->close();
+    }
+
+    $totalEstudiantes = (int)($totalEstudiantes ?? 0);
+    $estudiantesActivos = (int)($estudiantesActivos ?? 0);
+    $registrosMes = (int)($registrosMes ?? 0);
+    $totalSedes = (int)($totalSedes ?? 0);
 
     echo json_encode([
         'success' => true,
-        'totalEntregas' => $totalEntregas,
-        'totalUsuarios' => $totalUsuarios,
-        'entregasMes' => $entregasMes,
-        'labels' => $labels,
-        'values' => $values,
+        'totalEstudiantes' => $totalEstudiantes,
+        'estudiantesActivos' => $estudiantesActivos,
+        'registrosMes' => $registrosMes,
+        'totalSedes' => $totalSedes,
+        'labelsSedes' => $labelsSedes,
+        'valuesSedes' => $valuesSedes,
+        'labelsGrados' => $labelsGrados,
+        'valuesGrados' => $valuesGrados,
+        'labelsGenero' => $labelsGenero,
+        'valuesGenero' => $valuesGenero,
         'labelsMeses' => $labelsMeses,
-        'valoresMeses' => $valoresMeses
+        'valoresMeses' => $valoresMeses,
+        'labelsComunas' => $labelsComunas,
+        'valuesComunas' => $valuesComunas,
+        'labelsEstatus' => $labelsEstatus,
+        'valuesEstatus' => $valuesEstatus
     ]);
 
 } catch (Exception $e) {
-    respondWithError('Error interno del servidor', 'Exception: ' . $e->getMessage() . ' | File: ' . $e->getFile() . ' | Line: ' . $e->getLine());
+    respondWithError('Error interno del servidor', 'Exception: ' . $e->getMessage());
 } catch (Error $e) {
-    respondWithError('Error interno del servidor', 'Fatal Error: ' . $e->getMessage() . ' | File: ' . $e->getFile() . ' | Line: ' . $e->getLine());
+    respondWithError('Error interno del servidor', 'Fatal Error: ' . $e->getMessage());
 }
 
 if ($conn) {

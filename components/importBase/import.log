@@ -3326,3 +3326,745 @@
 [2026-02-17 00:55:23] [EMERGENCY] Filas vacías omitidas: 0
 [2026-02-17 00:55:23] [EMERGENCY] Total de errores: 0
 [2026-02-17 00:55:23] [EMERGENCY] === FIN DE IMPORTACIÓN ===
+[2026-02-24 20:46:52] [EMERGENCY] === INICIO DE IMPORTACIÓN ===
+[2026-02-24 20:46:52] [EMERGENCY] Archivo procesado: plantilla_base_prueba.xlsx
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 2: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 2: Estudiante 6215 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 3: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 3: Estudiante 6830 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 4: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 4: Estudiante 3708 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 5: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 5: Estudiante 6648 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 6: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 6: Estudiante 2400 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 7: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 7: Estudiante 5896 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 8: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 8: Estudiante 8852 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 9: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 9: Estudiante 4690 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 10: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 10: Estudiante 7257 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 11: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 11: Estudiante 7726 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 12: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 12: Estudiante 7714 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 13: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 13: Estudiante 5878 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 14: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 14: Estudiante 5662 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 15: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 15: Estudiante 2689 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 16: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 16: Estudiante 3507 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 17: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 17: Estudiante 1674 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 18: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 18: Estudiante 4719 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 19: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 19: Estudiante 7564 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 20: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 20: Estudiante 9933 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 21: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 21: Estudiante 6928 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 22: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 22: Estudiante 1838 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 23: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 23: Estudiante 3806 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 24: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 24: Estudiante 6880 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 25: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 25: Estudiante 8269 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 26: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 26: Estudiante 9063 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 27: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 27: Estudiante 4063 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 28: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 28: Estudiante 6380 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 29: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 29: Estudiante 4742 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 30: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 30: Estudiante 7650 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 31: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 31: Estudiante 3941 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 32: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 32: Estudiante 3807 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 33: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 33: Estudiante 5705 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 34: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 34: Estudiante 3895 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 35: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 35: Estudiante 8020 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 36: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 36: Estudiante 3334 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 37: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 37: Estudiante 3964 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 38: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 38: Estudiante 6211 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 39: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 39: Estudiante 4119 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 40: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 40: Estudiante 9637 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 41: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 41: Estudiante 5166 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 42: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 42: Estudiante 4458 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 43: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 43: Estudiante 2811 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 44: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 44: Estudiante 3842 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 45: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 45: Estudiante 5441 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 46: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 46: Estudiante 5522 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 47: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 47: Estudiante 7191 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 48: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 48: Estudiante 2736 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 49: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 49: Estudiante 7290 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 50: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 50: Estudiante 8139 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 51: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 51: Estudiante 2889 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 52: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 52: Estudiante 3214 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 53: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 53: Estudiante 1727 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 54: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 54: Estudiante 6977 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 55: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 55: Estudiante 4337 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 56: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 56: Estudiante 9986 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 57: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 57: Estudiante 6668 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 58: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 58: Estudiante 7962 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 59: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 59: Estudiante 4286 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 60: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 60: Estudiante 2527 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 61: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 61: Estudiante 8574 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 62: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 62: Estudiante 9858 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 63: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 63: Estudiante 6567 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 64: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 64: Estudiante 3283 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 65: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 65: Estudiante 5341 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 66: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 66: Estudiante 6094 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 67: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 67: Estudiante 7112 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 68: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 68: Estudiante 4123 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 69: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 69: Estudiante 6440 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 70: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 70: Estudiante 6842 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 71: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 71: Estudiante 4216 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 72: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 72: Estudiante 3041 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 73: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 73: Estudiante 8308 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 74: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 74: Estudiante 9344 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 75: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 75: Estudiante 2055 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 76: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 76: Estudiante 7110 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 77: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 77: Estudiante 7987 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 78: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 78: Estudiante 6492 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 79: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 79: Estudiante 7449 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 80: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 80: Estudiante 1686 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 81: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 81: Estudiante 1017 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 82: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 82: Estudiante 6657 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 83: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 83: Estudiante 1880 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 84: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 84: Estudiante 2861 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 85: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 85: Estudiante 8577 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 86: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 86: Estudiante 1764 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 87: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 87: Estudiante 5758 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 88: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 88: Estudiante 4164 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 89: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 89: Estudiante 7872 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 90: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 90: Estudiante 9623 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 91: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 91: Estudiante 9934 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 92: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 92: Estudiante 6516 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 93: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 93: Estudiante 8778 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 94: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 94: Estudiante 1504 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 95: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 95: Estudiante 8465 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 96: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 96: Estudiante 5434 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 97: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 97: Estudiante 6729 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 98: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 98: Estudiante 2970 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 99: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 99: Estudiante 6636 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 100: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 100: Estudiante 7480 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 234
+[2026-02-24 20:46:53] [EMERGENCY] Error: [8192] trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 171
+[2026-02-24 20:46:53] [EMERGENCY] Error: [2] Undefined array key 17 in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 235
+[2026-02-24 20:46:53] [EMERGENCY] DEBUG - Fila 101: row[17]='', status='NUEVO'
+[2026-02-24 20:46:53] [EMERGENCY] SUCCESS - Fila 101: Estudiante 9860 insertado correctamente
+[2026-02-24 20:46:53] [EMERGENCY] === RESUMEN DE IMPORTACIÓN ===
+[2026-02-24 20:46:53] [EMERGENCY] Nuevos registros: 100
+[2026-02-24 20:46:53] [EMERGENCY] Registros actualizados: 0
+[2026-02-24 20:46:53] [EMERGENCY] Filas vacías omitidas: 0
+[2026-02-24 20:46:53] [EMERGENCY] Total de errores: 0
+[2026-02-24 20:46:53] [EMERGENCY] === FIN DE IMPORTACIÓN ===
+[2026-02-24 21:43:59] [EMERGENCY] === INICIO DE IMPORTACIÓN ===
+[2026-02-24 21:43:59] [EMERGENCY] Archivo procesado: plantilla_base.xlsx
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 2: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 2: Estudiante 621566754 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 3: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 3: Estudiante 337413638 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 4: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 4: Estudiante 981846433 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 5: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 5: Estudiante 604936093 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] Error: [8192] preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 228
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 6: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 6: Estudiante 587863188 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] Error: [8192] preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 228
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 7: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 7: Estudiante 272730237 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 8: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 8: Estudiante 345648127 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 9: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 9: Estudiante 931100648 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 10: row[17]='RETIRADO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 10: Estudiante 833197551 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 11: row[17]='RETIRADO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 11: Estudiante 282356470 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 12: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 12: Estudiante 461784344 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] Error: [8192] preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 228
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 13: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 13: Estudiante 553034061 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 14: row[17]='RETIRADO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 14: Estudiante 707343477 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] Error: [8192] preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 228
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 15: row[17]='RETIRADO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 15: Estudiante 312424999 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 16: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 16: Estudiante 170182520 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 17: row[17]='RETIRADO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 17: Estudiante 343323296 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] Error: [8192] preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 228
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 18: row[17]='RETIRADO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 18: Estudiante 992262202 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] Error: [8192] preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 228
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 19: row[17]='RETIRADO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 19: Estudiante 399422341 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 20: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 20: Estudiante 257035666 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 21: row[17]='RETIRADO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 21: Estudiante 773679441 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 22: row[17]='RETIRADO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 22: Estudiante 950565010 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 23: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 23: Estudiante 759272116 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 24: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 24: Estudiante 136279183 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 25: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 25: Estudiante 837894958 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 26: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 26: Estudiante 676830774 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] Error: [8192] preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 228
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 27: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 27: Estudiante 981038445 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 28: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 28: Estudiante 911796683 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 29: row[17]='RETIRADO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 29: Estudiante 186026650 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] Error: [8192] preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 228
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 30: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 30: Estudiante 664015716 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] Error: [8192] preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 228
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 31: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 31: Estudiante 458879941 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 32: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 32: Estudiante 341318935 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 33: row[17]='RETIRADO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 33: Estudiante 368196493 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] Error: [8192] preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 228
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 34: row[17]='GRADUADO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 34: Estudiante 666931599 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] Error: [8192] preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 228
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 35: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 35: Estudiante 474670428 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 36: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 36: Estudiante 230457657 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 37: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 37: Estudiante 392468768 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 38: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 38: Estudiante 596022790 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 39: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 39: Estudiante 478660160 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 40: row[17]='GRADUADO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 40: Estudiante 347263354 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 41: row[17]='RETIRADO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 41: Estudiante 526347905 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] Error: [8192] preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 228
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 42: row[17]='RETIRADO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 42: Estudiante 147369045 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 43: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 43: Estudiante 420605462 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 44: row[17]='RETIRADO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 44: Estudiante 646071201 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 45: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 45: Estudiante 842121905 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] Error: [8192] preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 228
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 46: row[17]='RETIRADO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 46: Estudiante 802413731 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 47: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 47: Estudiante 193575030 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 48: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 48: Estudiante 811203759 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 49: row[17]='GRADUADO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 49: Estudiante 395122867 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 50: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 50: Estudiante 159246081 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] Error: [8192] preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 228
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 51: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 51: Estudiante 266370183 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 52: row[17]='RETIRADO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 52: Estudiante 957214099 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 53: row[17]='GRADUADO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 53: Estudiante 867817682 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] Error: [8192] preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 228
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 54: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 54: Estudiante 625815159 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] Error: [8192] preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 228
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 55: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 55: Estudiante 345859056 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 56: row[17]='RETIRADO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 56: Estudiante 135130554 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 57: row[17]='GRADUADO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 57: Estudiante 695123976 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] Error: [8192] preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 228
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 58: row[17]='RETIRADO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 58: Estudiante 651920777 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] Error: [8192] preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 228
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 59: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 59: Estudiante 513324385 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] Error: [8192] preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 228
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 60: row[17]='GRADUADO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 60: Estudiante 397593289 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 61: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 61: Estudiante 560928660 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 62: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 62: Estudiante 992929643 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 63: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 63: Estudiante 205661922 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 64: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 64: Estudiante 941457194 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 65: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 65: Estudiante 609498959 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 66: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 66: Estudiante 593879169 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 67: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 67: Estudiante 968295484 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 68: row[17]='GRADUADO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 68: Estudiante 558014172 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 69: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 69: Estudiante 914723616 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] Error: [8192] preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 228
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 70: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 70: Estudiante 394903463 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] Error: [8192] preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 228
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 71: row[17]='RETIRADO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 71: Estudiante 518876880 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] Error: [8192] preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 228
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 72: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 72: Estudiante 847759050 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 73: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 73: Estudiante 790485519 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 74: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 74: Estudiante 353966623 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 75: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 75: Estudiante 412382668 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 76: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 76: Estudiante 493740397 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 77: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 77: Estudiante 499197190 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] Error: [8192] preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 228
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 78: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 78: Estudiante 859945827 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 79: row[17]='GRADUADO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 79: Estudiante 842837625 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] Error: [8192] preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 228
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 80: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 80: Estudiante 263662117 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] Error: [8192] preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 228
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 81: row[17]='RETIRADO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 81: Estudiante 904466742 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 82: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 82: Estudiante 956308048 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 83: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 83: Estudiante 525448828 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 84: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 84: Estudiante 204082959 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 85: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 85: Estudiante 361440330 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 86: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 86: Estudiante 675545996 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 87: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 87: Estudiante 634636193 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 88: row[17]='RETIRADO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 88: Estudiante 604589980 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 89: row[17]='RETIRADO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 89: Estudiante 678001505 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 90: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 90: Estudiante 145517891 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 91: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 91: Estudiante 655067759 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 92: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 92: Estudiante 149605363 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] Error: [8192] preg_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in C:\xampp\htdocs\ESCOLINK\components\importBase\process_import.php on line 228
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 93: row[17]='GRADUADO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 93: Estudiante 898995357 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 94: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 94: Estudiante 924294382 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 95: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 95: Estudiante 176094216 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 96: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 96: Estudiante 359624797 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 97: row[17]='RETIRADO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 97: Estudiante 265106004 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 98: row[17]='GRADUADO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 98: Estudiante 675293117 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 99: row[17]='GRADUADO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 99: Estudiante 757127207 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 100: row[17]='ACTIVO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 100: Estudiante 953776150 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] DEBUG - Fila 101: row[17]='RETIRADO', status='NUEVO'
+[2026-02-24 21:43:59] [EMERGENCY] SUCCESS - Fila 101: Estudiante 367691272 insertado correctamente
+[2026-02-24 21:43:59] [EMERGENCY] === RESUMEN DE IMPORTACIÓN ===
+[2026-02-24 21:43:59] [EMERGENCY] Nuevos registros: 100
+[2026-02-24 21:43:59] [EMERGENCY] Registros actualizados: 0
+[2026-02-24 21:43:59] [EMERGENCY] Filas vacías omitidas: 0
+[2026-02-24 21:43:59] [EMERGENCY] Total de errores: 0
+[2026-02-24 21:43:59] [EMERGENCY] === FIN DE IMPORTACIÓN ===
