@@ -198,53 +198,172 @@ if (session_status() == PHP_SESSION_NONE) {
     </div>
 </div>
 
-<!-- Contenedor para centrar los Nav tabs -->
-<!-- <div class="d-flex justify-content-center">
-    <ul class="nav nav-tabs" id="studentsTab" role="tablist">
+<!-- Nav Tabs principal: Panel Estadístico / Tabla de Seguimiento -->
+<div class="container-fluid px-0 mt-3">
+    <ul class="nav nav-tabs" id="mainTrackingTabs" role="tablist">
         <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="matematicas-tab" data-bs-toggle="tab" data-bs-target="#matematicas-tab-pane" type="button" role="tab" aria-controls="matematicas-tab-pane" aria-selected="true">
-                Matemáticas (<span id="matematicas-count">0</span>)
+            <button class="nav-link active" id="stats-tab" data-bs-toggle="tab"
+                    data-bs-target="#stats-tab-pane" type="button" role="tab"
+                    aria-controls="stats-tab-pane" aria-selected="true">
+                <i class="bi bi-bar-chart-fill me-1"></i> Panel Estadístico
             </button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="espanol-tab" data-bs-toggle="tab" data-bs-target="#espanol-tab-pane" type="button" role="tab" aria-controls="espanol-tab-pane" aria-selected="false">
-                Español (<span id="espanol-count">0</span>)
-            </button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="ingles-tab" data-bs-toggle="tab" data-bs-target="#ingles-tab-pane" type="button" role="tab" aria-controls="ingles-tab-pane" aria-selected="false">
-                Inglés (<span id="ingles-count">0</span>)
-            </button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="ciencias-tab" data-bs-toggle="tab" data-bs-target="#ciencias-tab-pane" type="button" role="tab" aria-controls="ciencias-tab-pane" aria-selected="false">
-                Ciencias (<span id="ciencias-count">0</span>)
-            </button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="tecnologia-tab" data-bs-toggle="tab" data-bs-target="#tecnologia-tab-pane" type="button" role="tab" aria-controls="tecnologia-tab-pane" aria-selected="false">
-                Tecnología (<span id="tecnologia-count">0</span>)
+            <button class="nav-link" id="tracking-tab" data-bs-toggle="tab"
+                    data-bs-target="#tracking-tab-pane" type="button" role="tab"
+                    aria-controls="tracking-tab-pane" aria-selected="false">
+                <i class="bi bi-table me-1"></i> Tabla de Seguimiento
             </button>
         </li>
     </ul>
-</div> -->
 
-<!-- Contenedor para las tablas de estudiantes -->
-<div id="studentsContainer" class="card shadow" style="display: none;">
-    <div class="card-body">
-        <div class="table-responsive">
-            <!-- La tabla se genera dinámicamente -->
-        </div>
-    </div>
-</div>
+    <div class="tab-content border border-top-0 rounded-bottom bg-white shadow-sm p-3"
+         id="mainTrackingTabsContent">
+
+        <!-- ======================================================= -->
+        <!-- Tab 1: Panel Estadístico                                 -->
+        <!-- ======================================================= -->
+        <div class="tab-pane fade show active" id="stats-tab-pane"
+             role="tabpanel" aria-labelledby="stats-tab">
+
+            <!-- Placeholder cuando no hay grado seleccionado -->
+            <div id="statsPlaceholder" class="text-center py-5 text-muted">
+                <i class="bi bi-bar-chart fs-1"></i>
+                <p class="mt-2">Selecciona un grado para ver las estadísticas del grupo</p>
+            </div>
+
+            <!-- Panel de estadísticas (se muestra tras cargar) -->
+            <div id="statsContainer" style="display: none;">
+
+                <!-- KPI Cards -->
+                <div class="row g-3 mb-4">
+                    <div class="col-6 col-md-3">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body text-center border-start border-5 border-primary py-3">
+                                <div class="small text-muted mb-1">Total Estudiantes</div>
+                                <div class="fs-1 fw-bold text-primary" id="kpi-total-students">—</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body text-center border-start border-5 border-success py-3">
+                                <div class="small text-muted mb-1">% Asistencia promedio</div>
+                                <div class="fs-1 fw-bold text-success" id="kpi-avg-attendance">—</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body text-center border-start border-5 border-warning py-3">
+                                <div class="small text-muted mb-1">Total Clases</div>
+                                <div class="fs-1 fw-bold text-warning" id="kpi-total-classes">—</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body text-center border-start border-5 border-danger py-3">
+                                <div class="small text-muted mb-1">Intervenciones activas</div>
+                                <div class="fs-1 fw-bold text-danger" id="kpi-interventions">—</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fila 1: Distribución (Doughnut) + Tendencia (Line) -->
+                <div class="row g-3 mb-4">
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-header bg-transparent fw-semibold border-bottom">
+                                <i class="bi bi-pie-chart-fill me-1 text-indigo-dark"></i>
+                                Distribución de Asistencia
+                            </div>
+                            <div class="card-body d-flex align-items-center justify-content-center"
+                                 style="min-height: 280px;">
+                                <canvas id="chartAttendanceDistribution"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-header bg-transparent fw-semibold border-bottom">
+                                <i class="bi bi-graph-up me-1 text-indigo-dark"></i>
+                                Tendencia de Asistencia por Clase
+                            </div>
+                            <div class="card-body" style="min-height: 280px;">
+                                <canvas id="chartAttendanceTrend"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fila 2: Top ausentes (Bar horiz.) + Estado intervenciones (Bar) -->
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-header bg-transparent fw-semibold border-bottom">
+                                <i class="bi bi-person-x-fill me-1 text-danger"></i>
+                                Top 10 con más Ausencias
+                            </div>
+                            <div class="card-body" style="min-height: 280px;">
+                                <canvas id="chartTopAbsences"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-header bg-transparent fw-semibold border-bottom">
+                                <i class="bi bi-clipboard2-check-fill me-1 text-success"></i>
+                                Estado de Intervenciones
+                            </div>
+                            <div class="card-body d-flex align-items-center justify-content-center"
+                                 style="min-height: 280px;">
+                                <canvas id="chartInterventions"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /statsContainer -->
+        </div><!-- /stats-tab-pane -->
+
+        <!-- ======================================================= -->
+        <!-- Tab 2: Tabla de Seguimiento                              -->
+        <!-- ======================================================= -->
+        <div class="tab-pane fade" id="tracking-tab-pane"
+             role="tabpanel" aria-labelledby="tracking-tab">
+
+            <!-- Placeholder cuando no hay grado seleccionado -->
+            <div id="trackingPlaceholder" class="text-center py-5 text-muted">
+                <i class="bi bi-table fs-1"></i>
+                <p class="mt-2">Selecciona un grado para ver la tabla de seguimiento</p>
+            </div>
+
+            <div id="studentsContainer" style="display: none;">
+                <div class="table-responsive">
+                    <!-- La tabla se genera dinámicamente -->
+                </div>
+            </div>
+        </div><!-- /tracking-tab-pane -->
+
+    </div><!-- /tab-content -->
+</div><!-- /container-fluid Nav Tabs -->
 
 <!-- Bootstrap 5.3.3 CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
 <!-- Incluir SweetAlert2 -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!-- Incluir Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
 
 <script>
+    // Instancias globales de Chart.js
+    let chartDistribution = null;
+    let chartTrend        = null;
+    let chartTopAbsences  = null;
+    let chartInterventions = null;
+
     $(document).ready(function() {
         // Variable global para almacenar los datos cargados
         let currentTrackingData = null;
@@ -254,17 +373,26 @@ if (session_status() == PHP_SESSION_NONE) {
         $('#trackingGradeLevel').on('change', function() {
             const selectedGrade = $(this).val();
 
-            // Deshabilitar botón de exportación
+            // Deshabilitar botones de exportación
             $('#exportTrackingBtn').prop('disabled', true);
             currentTrackingData = null;
             currentGradeLevel = null;
 
+            // Resetear panel estadístico
+            $('#statsContainer').hide();
+            $('#statsPlaceholder').show();
+            destroyCharts();
+
             if (!selectedGrade) {
                 $('#studentsContainer').hide();
+                $('#trackingPlaceholder').show();
                 return;
             }
 
             currentGradeLevel = selectedGrade;
+
+            // Cargar estadísticas del grupo en paralelo con la tabla
+            loadGroupStats(selectedGrade);
 
             // Mostrar carga
             Swal.fire({
@@ -300,7 +428,8 @@ if (session_status() == PHP_SESSION_NONE) {
                         // Poblar la tabla única
                         populateTrackingTables(response.data, response.classes);
 
-                        // Mostrar contenedor
+                        // Mostrar contenedor de seguimiento
+                        $('#trackingPlaceholder').hide();
                         $('#studentsContainer').show();
 
                         // Habilitar botón de exportación si hay datos
@@ -547,9 +676,210 @@ if (session_status() == PHP_SESSION_NONE) {
             });
         });
 
+        // Ajustar anchos de DataTable al mostrar el tab de seguimiento
+        $('#mainTrackingTabs button[data-bs-target="#tracking-tab-pane"]').on('shown.bs.tab', function() {
+            if ($.fn.DataTable.isDataTable('#tracking-table')) {
+                $('#tracking-table').DataTable().columns.adjust().draw(false);
+            }
+        });
+
+        // Redibujar gráficas al volver al tab de estadísticas
+        $('#mainTrackingTabs button[data-bs-target="#stats-tab-pane"]').on('shown.bs.tab', function() {
+            [chartDistribution, chartTrend, chartTopAbsences, chartInterventions].forEach(function(c) {
+                if (c) c.resize();
+            });
+        });
+
         // ...existing code...
     }); // <-- Este es el cierre de $(document).ready()
 
+    // ─────────────────────────────────────────────────────────────────────────
+    // Funciones del Panel Estadístico
+    // ─────────────────────────────────────────────────────────────────────────
+
+    function destroyCharts() {
+        if (chartDistribution)  { chartDistribution.destroy();  chartDistribution  = null; }
+        if (chartTrend)         { chartTrend.destroy();         chartTrend         = null; }
+        if (chartTopAbsences)   { chartTopAbsences.destroy();   chartTopAbsences   = null; }
+        if (chartInterventions) { chartInterventions.destroy(); chartInterventions = null; }
+    }
+
+    function loadGroupStats(gradeLevel) {
+        $.ajax({
+            url: 'components/attendance/getGroupStats.php',
+            method: 'POST',
+            data: { grade_level: gradeLevel },
+            dataType: 'json',
+            success: function(response) {
+                if (response.success) {
+                    renderGroupStats(response.data);
+                }
+            },
+            error: function() {
+                console.error('Error al cargar estadísticas del grupo');
+            }
+        });
+    }
+
+    function renderGroupStats(data) {
+        // ── KPI Cards ──────────────────────────────────────────────────────────
+        $('#kpi-total-students').text(data.total_students);
+        $('#kpi-avg-attendance').text(data.avg_attendance + '%');
+        $('#kpi-total-classes').text(data.total_classes);
+        $('#kpi-interventions').text(data.active_interventions);
+
+        // Mostrar el contenedor ANTES de crear las gráficas para que Chart.js
+        // pueda medir correctamente las dimensiones reales del canvas
+        $('#statsPlaceholder').hide();
+        $('#statsContainer').show();
+
+        destroyCharts();
+
+        // ── Gráfica 1: Distribución de asistencia (Doughnut) ──────────────────
+        const ctxDist = document.getElementById('chartAttendanceDistribution').getContext('2d');
+        chartDistribution = new Chart(ctxDist, {
+            type: 'doughnut',
+            data: {
+                labels: ['Presente', 'Llegada tardía', 'Ausente'],
+                datasets: [{
+                    data: [
+                        data.distribution.presente,
+                        data.distribution.tarde,
+                        data.distribution.ausente
+                    ],
+                    backgroundColor: ['#008080', '#ff8c00', '#dc3545'],
+                    borderColor:     ['#006666', '#cc7000', '#b02a37'],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: { position: 'bottom' },
+                    tooltip: {
+                        callbacks: {
+                            label: function(ctx) {
+                                const total = ctx.dataset.data.reduce(function(a, b) { return a + b; }, 0);
+                                const pct   = total > 0 ? ((ctx.raw / total) * 100).toFixed(1) : 0;
+                                return ' ' + ctx.label + ': ' + ctx.raw + ' (' + pct + '%)';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // ── Gráfica 2: Tendencia de asistencia por clase (Line) ───────────────
+        const ctxTrend = document.getElementById('chartAttendanceTrend').getContext('2d');
+        const trendLabels = data.trend.map(function(t, i) {
+            const d = new Date(t.date + 'T00:00:00');
+            return 'Clase ' + (i + 1) + ' (' + d.toLocaleDateString('es-CO', { day: '2-digit', month: '2-digit' }) + ')';
+        });
+        chartTrend = new Chart(ctxTrend, {
+            type: 'line',
+            data: {
+                labels: trendLabels,
+                datasets: [{
+                    label: '% Asistencia',
+                    data: data.trend.map(function(t) { return t.pct_asistencia; }),
+                    borderColor: '#30336b',
+                    backgroundColor: 'rgba(48,51,107,0.12)',
+                    fill: true,
+                    tension: 0.4,
+                    pointBackgroundColor: '#30336b',
+                    pointRadius: 5
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                scales: {
+                    y: {
+                        min: 0,
+                        max: 100,
+                        ticks: { callback: function(v) { return v + '%'; } }
+                    }
+                },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: function(ctx) { return ' Asistencia: ' + ctx.raw + '%'; }
+                        }
+                    }
+                }
+            }
+        });
+
+        // ── Gráfica 3: Top 10 estudiantes con más ausencias (Bar horizontal) ──
+        const ctxAbs = document.getElementById('chartTopAbsences').getContext('2d');
+        const absLabels = data.top_absences.map(function(s) {
+            const n = s.nombre || s.student_id;
+            return n.length > 22 ? n.substring(0, 22) + '…' : n;
+        });
+        chartTopAbsences = new Chart(ctxAbs, {
+            type: 'bar',
+            data: {
+                labels: absLabels,
+                datasets: [{
+                    label: 'Ausencias',
+                    data: data.top_absences.map(function(s) { return s.ausencias; }),
+                    backgroundColor: 'rgba(220,53,69,0.75)',
+                    borderColor: '#dc3545',
+                    borderWidth: 1,
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: { legend: { display: false } },
+                scales: {
+                    x: { beginAtZero: true, ticks: { stepSize: 1 } }
+                }
+            }
+        });
+
+        // ── Gráfica 4: Estado de intervenciones (Bar vertical) ────────────────
+        const inv    = data.interventions;
+        const ctxInv = document.getElementById('chartInterventions').getContext('2d');
+        chartInterventions = new Chart(ctxInv, {
+            type: 'bar',
+            data: {
+                labels: ['Con intervención', 'Resueltas', 'Con estrategia', 'Estrategia cumplida'],
+                datasets: [{
+                    label: 'Estudiantes',
+                    data: [
+                        inv.con_intervencion,
+                        inv.resueltas,
+                        inv.con_estrategia,
+                        inv.estrategia_cumplida
+                    ],
+                    backgroundColor: ['#30336b', '#008080', '#ff8c00', '#198754'],
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: { legend: { display: false } },
+                scales: {
+                    y: { beginAtZero: true, ticks: { stepSize: 1 } }
+                }
+            }
+        });
+
+        // Forzar recálculo de dimensiones tras el repintado del DOM
+        setTimeout(function() {
+            [chartDistribution, chartTrend, chartTopAbsences, chartInterventions].forEach(function(c) {
+                if (c) c.resize();
+            });
+        }, 50);
+    }
+
+    // ─────────────────────────────────────────────────────────────────────────
     // Función para inicializar DataTables
     function initializeSingleDataTable() {
         const table = $('#tracking-table');

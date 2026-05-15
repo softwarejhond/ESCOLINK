@@ -51,6 +51,26 @@ require_once __DIR__ . '/../components/addUsers/swalAddUser.php';
                     <?php endif; ?>
 
                     <?php if ($rol === 'Administrador' || $rol === 'Control maestro' || $rol === 'Asesor'): ?>
+
+                        <div class="col-4">
+                            <div class="checkbox"
+                                data-bs-toggle="popover"
+                                data-bs-trigger="hover focus"
+                                data-bs-placement="bottom"
+                                data-bs-content="Lista de grupos y estudiantes">
+                                <a href="groups.php">
+                                    <label class="checkbox-wrapper">
+                                        <span class="checkbox-tile">
+                                            <span class="checkbox-icon">
+                                                <i class="bi bi-person-lines-fill icono"></i>
+                                            </span>
+                                            <span class="checkbox-label">Estudiantes</span>
+                                        </span>
+                                    </label>
+                                </a>
+                            </div>
+                        </div>
+
                         <div class="col-4">
                             <div class="checkbox"
                                 data-bs-toggle="popover"
@@ -82,6 +102,25 @@ require_once __DIR__ . '/../components/addUsers/swalAddUser.php';
                                                 <i class="bi bi-list-task icono"></i>
                                             </span>
                                             <span class="checkbox-label">Asistencias</span>
+                                        </span>
+                                    </label>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-4">
+                            <div class="checkbox"
+                                data-bs-toggle="popover"
+                                data-bs-trigger="hover focus"
+                                data-bs-placement="bottom"
+                                data-bs-content="Edición de asistencias por grupos">
+                                <a href="editarAsistencia.php">
+                                    <label class="checkbox-wrapper">
+                                        <span class="checkbox-tile">
+                                            <span class="checkbox-icon">
+                                                <i class="bi bi-calendar3-event icono"></i>
+                                            </span>
+                                            <span class="checkbox-label">Editar</span>
                                         </span>
                                     </label>
                                 </a>
