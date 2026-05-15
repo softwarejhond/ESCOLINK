@@ -83,8 +83,8 @@ usort($grades, function ($a, $b) {
     <!-- Tarjeta de filtro -->
     <div class="card shadow-sm mb-3">
         <div class="card-body py-3">
-            <div class="d-flex align-items-end gap-3" style="flex-wrap: nowrap; overflow-x: auto;">
-                <div style="flex: 0 0 260px;">
+            <div class="d-flex align-items-end gap-3 w-100" style="flex-wrap: nowrap;">
+                <div style="flex: 3 1 200px; min-width: 0;">
                     <label class="form-label fw-semibold mb-1">Grupo / Grado</label>
                     <select id="groupGradeLevel" class="form-select">
                         <option value="">Seleccione un grupo</option>
@@ -95,10 +95,10 @@ usort($grades, function ($a, $b) {
                         <?php endforeach; ?>
                     </select>
                 </div>
-                <button id="btnNuevoEstudiante" class="btn btn-nuevo-estudiante text-white px-4 flex-shrink-0" disabled>
+                <button id="btnNuevoEstudiante" class="btn btn-nuevo-estudiante text-white" style="flex: 2 1 160px; min-width: 0;" disabled>
                     <i class="bi bi-person-plus-fill me-1"></i> Nuevo Estudiante
                 </button>
-                <span id="totalEstudiantes" class="text-muted flex-shrink-0 align-self-center"></span>
+                <span id="totalEstudiantes" class="text-muted align-self-center" style="flex: 1 1 120px; min-width: 0;"></span>
             </div>
         </div>
     </div>

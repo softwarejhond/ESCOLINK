@@ -34,9 +34,15 @@ usort($grades, function ($a, $b) {
 <style>
     #editAttWrapper { display: none; }
 
-    .radio-presente { accent-color: #198754; }
-    .radio-tarde    { accent-color: #fd7e14; }
-    .radio-ausente  { accent-color: #dc3545; }
+    .att-radio {
+        width: 24px !important;
+        height: 24px !important;
+        cursor: pointer;
+        flex-shrink: 0;
+    }
+    .att-radio[value="presente"] { accent-color: #198754; }
+    .att-radio[value="tarde"]    { accent-color: #fd7e14; }
+    .att-radio[value="ausente"]  { accent-color: #dc3545; }
 
     #editAttTable th,
     #editAttTable td {
@@ -66,9 +72,9 @@ usort($grades, function ($a, $b) {
 
     <!-- Tarjeta de filtros -->
     <div class="card shadow-sm mb-3">
-        <div class="card-body py-3">
-            <div class="d-flex align-items-end gap-3" style="flex-wrap: nowrap; overflow-x: auto;">
-                <div style="flex: 0 0 260px;">
+        <div class="card-body py-3 w-100">
+            <div class="d-flex align-items-end w-100 gap-3" style="flex-wrap: nowrap;">
+                <div style="flex: 3 1 220px; min-width: 0;">
                     <label class="form-label fw-semibold mb-1">Grupo / Grado</label>
                     <select id="editGradeLevel" class="form-select">
                         <option value="">Seleccione un grupo</option>
@@ -79,17 +85,16 @@ usort($grades, function ($a, $b) {
                         <?php endforeach; ?>
                     </select>
                 </div>
-                <div style="flex: 0 0 195px;">
+                <div style="flex: 2 1 160px; min-width: 0;">
                     <label class="form-label fw-semibold mb-1">Fecha de clase</label>
                     <input type="date" id="editClassDate" class="form-control"
                            max="<?= date('Y-m-d') ?>">
                 </div>
-                <button id="btnSaveAttEdit" class="btn text-white flex-shrink-0"
-                        style="background:linear-gradient(135deg,#198754,#0f6944);border:none;font-weight:600;box-shadow:0 3px 8px rgba(25,135,84,.35);"
+                <button id="btnSaveAttEdit" class="btn text-white" style="flex: 2 1 160px; min-width: 0; background:linear-gradient(135deg,#198754,#0f6944);border:none;font-weight:600;box-shadow:0 3px 8px rgba(25,135,84,.35);"
                         disabled>
                     <i class="bi bi-floppy me-1"></i> Guardar Cambios
                 </button>
-                <button id="btnViewHistory" class="btn btn-outline-secondary flex-shrink-0" disabled>
+                <button id="btnViewHistory" class="btn btn-outline-secondary" style="flex: 1 1 130px; min-width: 0;" disabled>
                     <i class="bi bi-clock-history me-1"></i> Ver Historial
                 </button>
             </div>

@@ -218,10 +218,63 @@ while ($empresaLog = mysqli_fetch_array($queryCompany)) {
             text-decoration: none !important;
             font-weight: normal;
         }
+
+        /* ── Splash Screen ── */
+        #splash-screen {
+            position: fixed;
+            inset: 0;
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.6s ease, visibility 0.6s ease;
+        }
+        #splash-screen.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        #splash-screen .splash-logo {
+            width: 220px;
+            max-width: 70vw;
+            animation: splashPulse 1.8s ease-in-out infinite;
+        }
+        @keyframes splashPulse {
+            0%, 100% { transform: scale(1);   opacity: 1; }
+            50%       { transform: scale(1.06); opacity: 0.8; }
+        }
+        .splash-dots {
+            display: flex;
+            gap: 8px;
+            margin-top: 32px;
+        }
+        .splash-dots span {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--primary-color, #d4c4a8);
+            animation: splashBounce 1.2s ease-in-out infinite;
+        }
+        .splash-dots span:nth-child(2) { animation-delay: 0.2s; }
+        .splash-dots span:nth-child(3) { animation-delay: 0.4s; }
+        @keyframes splashBounce {
+            0%, 80%, 100% { transform: translateY(0);    opacity: 0.4; }
+            40%            { transform: translateY(-12px); opacity: 1; }
+        }
     </style>
 </head>
 
 <body>
+
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+        <img src="./img/logos/logo_escolink.png" alt="Escolink" class="splash-logo">
+        <div class="splash-dots">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+
     <div class="login-container">
         <div class="login-sidebar" style="position: relative;">
             <div class="login-logo">
@@ -299,6 +352,19 @@ while ($empresaLog = mysqli_fetch_array($queryCompany)) {
         </div>
     </div>
 
+    <script>
+        // Ocultar splash cuando la página esté completamente cargada
+        window.addEventListener('load', function () {
+            var splash = document.getElementById('splash-screen');
+            // Pequeño retardo mínimo para que el splash sea visible
+            setTimeout(function () {
+                splash.classList.add('hidden');
+                splash.addEventListener('transitionend', function () {
+                    splash.remove();
+                }, { once: true });
+            }, 600);
+        });
+    </script>
     <script src="js/tooglePassword.js"></script>
     <script src="components/hooks/lineLogin.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
